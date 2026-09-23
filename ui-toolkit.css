@@ -1,0 +1,17 @@
+/* Shared game-generated skins, live text and native keyboard semantics. */
+.primary,.secondary{font-family:WildsText,monospace;font-size:24px;min-height:52px;border:9px solid transparent;border-image:url('ui-skins/button.png') 9 fill stretch;background:transparent;border-radius:0;box-shadow:none;text-shadow:1px 1px #101e18;padding:4px 18px;image-rendering:pixelated;color:#eee5c7}
+.primary:hover,.secondary:hover,.primary:focus-visible,.secondary:focus-visible{border-image-source:url('ui-skins/selected.png');transform:none;color:#fff0b8;outline:2px solid #f0d998;outline-offset:2px}
+.primary:active,.secondary:active{border-image-source:url('ui-skins/pressed.png');transform:none}
+.primary:disabled,.secondary:disabled{border-image-source:url('ui-skins/disabled.png');color:#a39d7a;opacity:1}
+.menu-links{gap:10px}.menu-links button{display:inline-flex;align-items:center;justify-content:center;gap:8px}.menu-links img{width:28px;height:28px;image-rendering:pixelated}
+dialog{border:16px solid transparent;border-image:url('ui-skins/window.png') 16 fill stretch;background:transparent;border-radius:0;box-shadow:0 16px 50px #0008;image-rendering:pixelated;padding:20px;color:#eee5c7}dialog h2{font-family:WildsText,monospace;color:#f0d998}dialog h3{color:#d6b566}dialog::backdrop{background:#06100ddd}
+progress{appearance:none;border:7px solid transparent;border-image:url('ui-skins/well.png') 9 fill stretch;background:#101e18;height:28px;image-rendering:pixelated;border-radius:0}progress::-webkit-progress-bar{background:#101e18}progress::-webkit-progress-value{background:#d6b566}progress::-moz-progress-bar{background:#d6b566}
+input[type=range]{accent-color:#d6b566}dialog{scrollbar-color:#d6b566 #17362a;scrollbar-width:thin}
+@media(max-width:650px){.menu-links{flex-wrap:wrap}.menu-links button{font-size:22px;padding:2px 8px}.menu-links img{width:24px;height:24px}}
+input[type=range]{appearance:none;background:transparent;height:36px;image-rendering:pixelated;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:18px;border:7px solid transparent;border-image:url('ui-skins/well.png') 9 stretch;background:linear-gradient(to right,#d6b566 var(--fill,50%),#17362a var(--fill,50%));border-radius:0}
+input[type=range]::-webkit-slider-thumb{appearance:none;width:24px;height:24px;margin-top:-10px;background:url('ui-skins/rune_knob.png') center/contain no-repeat;border:0;border-radius:0;image-rendering:pixelated}
+input[type=range]::-moz-range-track{height:8px;background:#17362a;border:2px solid #593a24;border-radius:0}
+input[type=range]::-moz-range-progress{background:#d6b566;height:8px}
+input[type=range]::-moz-range-thumb{width:24px;height:24px;border:0;border-radius:0;background:url('ui-skins/rune_knob.png') center/contain no-repeat}
+input[type=range]:focus-visible{outline:2px solid #f0d998;outline-offset:4px}

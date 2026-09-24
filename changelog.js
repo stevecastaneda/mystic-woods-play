@@ -8,7 +8,8 @@ window.WILDS_CHANGELOG = [
       'Crack woodland rocks for stone. Jellies drop gel, skeletons drop bone, and Hollowoak leaves a big pile of wood.',
       'Materials go in a pouch that you keep even after a run ends. Check it at the bottom of your Inventory.',
       'Craft at the workbench in the cottage: an axe, a spear, bone daggers, a bark shield, weapon sharpening, and healing salves.',
-      'New recipe: brew Health of the Hearts, a potion from the depths of Mt. Doom.'
+      'New recipe: brew Health of the Hearts, a potion from the depths of Mt. Doom.',
+      'Controllers work in every menu: the D-pad moves through Pause, Inventory, the workbench, the shop, and blessings. A equips gear right from a slot, and B backs out.'
     ]
   },
   {

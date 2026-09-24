@@ -1,6 +1,16 @@
 // Keep this short and player-facing. Newest releases first; show at most three.
 window.WILDS_CHANGELOG = [
   {
+    date: 'September 24, 2026',
+    title: 'The Woodcutter’s Update',
+    changes: [
+      'Chop down forest trees! A sword takes three swings, and an axe fells a tree in one. Stumps stay behind.',
+      'Crack woodland rocks for stone. Jellies drop gel, skeletons drop bone, and Hollowoak leaves a big pile of wood.',
+      'Materials go in a pouch that you keep even after a run ends. Check it at the bottom of your Inventory.',
+      'Craft at the workbench in the cottage: an axe, a spear, bone daggers, a bark shield, weapon sharpening, and healing salves.'
+    ]
+  },
+  {
     date: 'September 23, 2026',
     title: 'Choose your weapon',
     changes: [

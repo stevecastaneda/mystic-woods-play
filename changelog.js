@@ -11,7 +11,8 @@ window.WILDS_CHANGELOG = [
       'New recipe: brew Health of the Hearts, a potion from the depths of Mt. Doom.',
       'Controllers work in every menu: the D-pad moves through Pause, Inventory, the workbench, the shop, and blessings. A equips gear right from a slot, and B backs out.',
       'Gear you craft is yours to keep. It stays with you after a run ends and the next time you play.',
-      'Fixed: Hollowoak was invisible in the browser and on iPad. The colossus now shows up for the fight.'
+      'Fixed: Hollowoak was invisible in the browser and on iPad. The colossus now shows up for the fight.',
+      'Fixed: Pause now shows your real armor from equipped gear, and how much damage it blocks.'
     ]
   },
   {

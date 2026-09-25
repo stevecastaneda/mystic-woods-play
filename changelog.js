@@ -2,6 +2,16 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 25, 2026',
+    title: 'Sharper swings',
+    changes: [
+      'Every swing glides smoothly back into your hand and lands exactly where your weapon rests.',
+      'Hit stars burst right where your weapon meets the monster, even when a spear runs clean through it.',
+      'The axe has a real shaded axe head, and every weapon stays crisp at every angle.',
+      "Your hero's shirt no longer drops pixels mid-swing or bare-handed."
+    ]
+  },
+  {
+    date: 'September 25, 2026',
     title: 'Real swings',
     changes: [
       'Your weapon really swings now: wind up, strike, follow through and settle back, in every direction.',

@@ -29,7 +29,7 @@ dialog{background:#10291f;color:#eee4c8;border:2px solid #b49b5f;box-shadow:0 12
 <p class="footnote">A little courage. A little luck. One more depth.</p></section>
 <dialog id="help-dialog" aria-labelledby="help-title"><h2 id="help-title" tabindex="-1">Find your way</h2><h3>Touch</h3><p>Left thumb to move. Hold the sword to attack.<br>Use the boot to dash and the hand to interact.</p><h3>Controller</h3><p>Left stick to move. A / Cross to attack.<br>B / Circle to dash. X / Square to interact.</p><h3>Keyboard</h3><p>WASD or arrows to move. Space to attack.<br>Shift to dash. E to interact. Escape to pause.</p><p>Story Mode: find Luke with Charlotte at your side, then the waystone opens. Endless Wilds: defeat enemies to open the way down.</p><p> Collect coins for the merchant after every three combat floors.</p><form method="dialog"><button class="secondary">Back</button></form></dialog>
 <dialog id="sound-dialog" aria-labelledby="sound-title"><h2 id="sound-title" tabindex="-1">Sounds of the Wilds</h2><label>Music <output id="music-value">55%</output><input id="music" type="range" min="0" max="100" value="55"></label><label>Effects <output id="effects-value">75%</output><input id="effects" type="range" min="0" max="100" value="75"></label><form method="dialog"><button class="secondary">Done</button></form></dialog>
-<dialog id="name-dialog" aria-labelledby="name-title"><h2 id="name-title" tabindex="-1">Who are you?</h2><p>You are the oldest of three. Charlotte and Luke are counting on you.</p><form method="dialog" id="name-form"><label>Your name<input id="hero-name" type="text" maxlength="12" autocomplete="off" spellcheck="false" required></label><div class="actions"><button class="primary" value="go">Begin</button><button class="secondary" value="cancel" formnovalidate>Back</button></div></form></dialog>
+<dialog id="name-dialog" aria-labelledby="name-title"><h2 id="name-title" tabindex="-1">Who are you?</h2><p>You are the oldest of three. Charlotte and Luke are counting on you.</p><p id="story-saved" hidden>Welcome back! Pick up where you left off, or start the story over from the very beginning.</p><form method="dialog" id="name-form"><label>Your name<input id="hero-name" type="text" maxlength="12" autocomplete="off" spellcheck="false" required></label><div class="actions"><button class="primary" id="story-go" value="go">Begin</button><button class="secondary" id="new-story" value="new" hidden>New story</button><button class="secondary" value="cancel" formnovalidate>Back</button></div></form></dialog>
 <dialog id="news-dialog" aria-labelledby="news-title"><h2 id="news-title" tabindex="-1">What's new</h2><div id="news-content"><p>Recent updates are temporarily unavailable.</p></div><form method="dialog"><button class="secondary">Back</button></form></dialog>
 <section id="rotate"><h2>Turn your iPad sideways</h2><p>The forest plays best in landscape.</p></section>
 <script src="changelog.js"></script>
@@ -46,7 +46,7 @@ if(Array.isArray(releases)&&releases.length){
   article.append(date,heading,list);content.append(article);
  }
 }
-const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":5343740,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":5344124,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const engine=new Engine(config);
 const play=document.getElementById('play'),status=document.getElementById('status'),progress=document.getElementById('progress');
 for(const name of ['help','sound','news']) document.getElementById(name).addEventListener('click',()=>{const dialog=document.getElementById(name+'-dialog');dialog.showModal();dialog.querySelector('h2').focus();});
@@ -61,14 +61,22 @@ let closed=false;
 play.addEventListener('click',()=>{
  if(closed)return location.reload();
  try{nameInput.value=localStorage.getItem('wilds-hero-name')||'';}catch{}
+ const saved=savedStory();
+ document.getElementById('story-saved').hidden=!saved;
+ document.getElementById('new-story').hidden=!saved;
+ document.getElementById('story-go').textContent=saved?'Continue':'Begin';
  nameDialog.showModal();nameInput.focus();nameInput.select();
 });
 nameDialog.addEventListener('close',()=>{
- const name=nameInput.value.trim();
- if(nameDialog.returnValue!=='go'||!name)return;
+ const name=nameInput.value.trim(),choice=nameDialog.returnValue;
+ if(choice==='cancel'||!name)return;
  try{localStorage.setItem('wilds-hero-name',name);}catch{}
- start(['--story','--hero='+name]);
+ start([choice==='new'?'--new-story':'--story','--hero='+name]);
 });
+// True once a story has been started, so the name box can offer Continue or New story.
+function savedStory(){
+ try{const story=JSON.parse(localStorage.getItem('wilds-story')||'null');return !!story&&(story.intro_seen||Number(story.chapter)>0);}catch{return false;}
+}
 endless.addEventListener('click',()=>start([]));
 async function start(args){
  play.disabled=endless.disabled=true;status.textContent='Opening the forest…';progress.hidden=false;

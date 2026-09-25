@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 25, 2026',
+    title: 'Smoother woods',
+    changes: [
+      'Trees now fall and rocks crack without a stutter.',
+      'Cottage doors swing open smoothly.',
+      "Hollowoak's clearing loads in a blink."
+    ]
+  },
+  {
+    date: 'September 25, 2026',
     title: 'Sharper swings',
     changes: [
       'Every swing glides smoothly back into your hand and lands exactly where your weapon rests.',

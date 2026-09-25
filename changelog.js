@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 24, 2026',
+    title: 'Story Mode: Find Luke',
+    changes: [
+      'A new Story Mode! Pick your name and play the oldest of three kids trying to lead the family out of a forest full of monsters.',
+      'Chapter 1: Luke got scared and ran off. Find him with your sister Charlotte, who follows you and fights beside you.',
+      'Endless Wilds is still here, same as before.'
+    ]
+  },
+  {
+    date: 'September 24, 2026',
     title: 'Leaf storm',
     changes: [
       'Leveling up is now a big event! The game stops, a storm of leaves, pebbles, sparks, or stars falls, and your new perk flips in.',

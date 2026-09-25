@@ -8,6 +8,7 @@ window.WILDS_CHANGELOG = [
       'Swords and axes carve a crisp white arc, spears thrust with speed lines, and daggers stab with one hand, then the other.',
       'When a hit lands, the freeze holds your weapon right in the monster, and the star bursts at its tip.',
       'No weapon? You throw a real punch.',
+      'Mid-swing, the hand holding your weapon leaves your side, so there is never an extra hand.',
       'Rarer weapons edge their arc in their own color.'
     ]
   },

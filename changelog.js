@@ -2,6 +2,16 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 25, 2026',
+    title: 'Spin attack!',
+    changes: [
+      'Keep holding attack after a swing and you hold your weapon out in front of you. When it flashes and the tip twinkles, let go to spin and hit every monster around you for double damage.',
+      'Every press of attack is one swing now. Mashing still swings as fast as your weapon allows.',
+      'While you charge you walk slower and keep facing forward. Getting hit or dashing drops the charge.',
+      'Swords, spears, axes and daggers can all spin, and a spear spins widest.'
+    ]
+  },
+  {
+    date: 'September 25, 2026',
     title: 'Torchlight',
     changes: [
       'Crypts are lit by torches: flames flicker in their wall niches, spit sparks, and throw warm pools of light across the floor.',

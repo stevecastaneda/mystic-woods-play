@@ -1,6 +1,17 @@
 // Keep this short and player-facing. Newest releases first; show at most three.
 window.WILDS_CHANGELOG = [
   {
+    date: 'September 25, 2026',
+    title: 'Every hit lands',
+    changes: [
+      'Sword hits land with a punch: the action freezes for a split second, enemies blink white, a star bursts where your blade connects, and sparks fly.',
+      'Enemies get knocked back farther. Defeated monsters collapse, then vanish in a puff of smoke.',
+      'Getting hit knocks you back, and you flicker while you recover, just like the classics.',
+      'Dashing leaves a trail of blue afterimages.',
+      'Falling in battle is dramatic now: the world turns red, you spin and collapse, and the dark closes in around a pool of light.'
+    ]
+  },
+  {
     date: 'September 24, 2026',
     title: 'Story Mode: Find Luke',
     changes: [

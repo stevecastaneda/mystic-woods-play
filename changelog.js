@@ -2,6 +2,16 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 25, 2026',
+    title: 'Living hearts',
+    changes: [
+      'Your hearts refill one half at a time, with a soft tick as each heart fills.',
+      'Hearts you lose flash white first, and new heart containers pop in when you reach a new floor.',
+      'Down to your last heart? It pulses gently with a quiet heartbeat.',
+      'Empty hearts are easy to spot in the dark crypts.'
+    ]
+  },
+  {
+    date: 'September 25, 2026',
     title: 'Spin attack!',
     changes: [
       'Keep holding attack after a swing and you hold your weapon out in front of you. When it flashes and the tip twinkles, let go to spin and hit every monster around you for double damage.',

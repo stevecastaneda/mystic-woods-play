@@ -2,6 +2,14 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 24, 2026',
+    title: 'Leaf storm',
+    changes: [
+      'Leveling up is now a big event! The game stops, a storm of leaves, pebbles, sparks, or stars falls, and your new perk flips in.',
+      'Levels take longer to earn, so each one means more.'
+    ]
+  },
+  {
+    date: 'September 24, 2026',
     title: 'Level up!',
     changes: [
       'Earn XP in four skills: Woodcutting, Mining, Crafting, and Combat. Chop trees, crack rocks, craft, and fight to level up.',

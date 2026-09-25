@@ -2,12 +2,22 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 25, 2026',
+    title: 'Torchlight',
+    changes: [
+      'Crypts are lit by torches: flames flicker in their wall niches, spit sparks, and throw warm pools of light across the floor.',
+      'Clear a floor and the stairs gleam and sparkle, so you always know the way down.',
+      'Walls cast shadows, the merchant\'s shop glows like a lamplit room, and defeated monsters vanish in a puffier cloud of smoke.',
+      'Dashing is back to a simple kick of dust, without the blue afterimages.',
+      'Fixed a rare forest where a campsite sign blocked the trail and the next floor could never load.'
+    ]
+  },
+  {
+    date: 'September 25, 2026',
     title: 'Every hit lands',
     changes: [
       'Sword hits land with a punch: the action freezes for a split second, enemies blink white, a star bursts where your blade connects, and sparks fly.',
       'Enemies get knocked back farther. Defeated monsters collapse, then vanish in a puff of smoke.',
       'Getting hit knocks you back, and you flicker while you recover, just like the classics.',
-      'Dashing leaves a trail of blue afterimages.',
       'Falling in battle is dramatic now: the world turns red, you spin and collapse, and the dark closes in around a pool of light.'
     ]
   },

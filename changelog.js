@@ -2,6 +2,17 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 25, 2026',
+    title: 'Real swings',
+    changes: [
+      'Your weapon really swings now: wind up, strike, follow through and settle back, in every direction.',
+      'Swords and axes carve a crisp white arc, spears thrust with speed lines, and daggers stab with one hand, then the other.',
+      'When a hit lands, the freeze holds your weapon right in the monster, and the star bursts at its tip.',
+      'No weapon? You throw a real punch.',
+      'Rarer weapons edge their arc in their own color.'
+    ]
+  },
+  {
+    date: 'September 25, 2026',
     title: 'Living hearts',
     changes: [
       'Your hearts refill one half at a time, with a soft tick as each heart fills.',

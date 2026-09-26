@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Word by word',
+    changes: [
+      "Story scenes talk like A Link to the Past: words type out in a classic pixel text box with a soft blip for every letter, and everyone has their own voice. Luke's is the squeakiest!",
+      "Whoever is talking has their name on a little tab in their own color, right under them, and a gold arrow blinks when it's time to press on.",
+      "Game messages pop up in the same pixel box, just big enough for their words, and stay out of Charlotte's corner."
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Here they come!',
     changes: [
       "Monsters don't just pop in anymore. A jelly's shadow grows on the ground, then it drops from the sky, squishes flat and bounces into place.",

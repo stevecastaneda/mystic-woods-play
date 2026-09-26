@@ -13,6 +13,8 @@ window.WILDS_CHANGELOG = [
     title: 'A legendary opening',
     changes: [
       'The title screen opens like a legend: gold letters stamp in one by one, a sword falls from the sky behind them and lands with a flash, and a shine sweeps across the logo.',
+      "As the shine crosses the letters, a glint races down the blade with it and a star flares on the sword's point.",
+      'The C in MYSTIC now reads clearly as a C.',
       'Press any key or tap to skip straight to the menu.',
       'The title is bigger and sharper on laptops, iPads and big screens.'
     ]

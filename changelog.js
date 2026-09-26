@@ -2,6 +2,14 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Critical hits!',
+    changes: [
+      'A gold number always means a critical hit now. It does double damage, lands with a crunch and only happens about once in twenty swings, so a gold number is a real whoa!',
+      "Finishing off a monster still lands with a big bounce, but its number stays white. Daggers still crit on every strike right out of a dash!"
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Press start!',
     changes: [
       'The title screen now waits in the dark woods for you. Press any key or button, or tap the screen, and watch the legendary sword fall!',

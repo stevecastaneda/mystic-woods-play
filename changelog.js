@@ -2,6 +2,14 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Into the dark!',
+    changes: [
+      'Monsters stay in sight all through sunset now, and they come back into view as the sun rises.',
+      'They sink into the dark as night really falls, so nights are a bit spookier!'
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Chapter 2: The Stranger!',
     changes: [
       'Story Mode has a new chapter! Once Luke is back, the three of you set off deeper into the woods, and someone in the shadows is watching.',

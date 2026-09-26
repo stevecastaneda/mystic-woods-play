@@ -2,6 +2,24 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Chapter 2: The Stranger!',
+    changes: [
+      'Story Mode has a new chapter! Once Luke is back, the three of you set off deeper into the woods, and someone in the shadows is watching.',
+      "Explore the trails to find an old stone door. A stranger in a dark hood waits beside it. Should you trust him? Luke isn't so sure..."
+    ]
+  },
+  {
+    date: 'September 26, 2026',
+    title: 'Yours to keep!',
+    changes: [
+      "In Story Mode the Mystic Sword is yours to keep! Fall and start again, and it's right where you left it, in your hand or your bag. If Charlotte has it when her player stops playing, she puts it in your bag.",
+      'The deeper you go, the stronger it gets! On every floor it is as strong as the best sword you could find there.',
+      'Sharpening makes it even stronger, and in Story Mode it stays sharp for good.',
+      'Endless Wilds still starts every run fresh, so there you have to find it again!'
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Steady bars!',
     changes: [
       "A monster's health bar and its warning \"!\" now always float right above its head. They stay put when it turns, hops or gets knocked back.",
@@ -15,7 +33,7 @@ window.WILDS_CHANGELOG = [
       'A legendary sword is hidden deep in the woods. The Mystic Sword is the only weapon that fires a sword beam, just like the Master Sword in A Link to the Past!',
       "Beat Hollowoak on floor 18 or deeper and its Elder chest might hold it. It's rare, so keep trying!",
       'With all your hearts full, every swing sends a sparkly beam flying. Get hurt and the beams stop. Heal up and your blade glints to say they are back!',
-      "Beams light up the night, and whoever holds the Mystic Sword fires them, Charlotte too! It is a treasure, so you can't sell it or throw it away for the rest of your run."
+      "Beams light up the night, and whoever holds the Mystic Sword fires them, Charlotte too! It is a treasure, so you can never sell it or throw it away."
     ]
   },
   {

@@ -9,8 +9,8 @@
 <link rel="preload" href="PixelifySans.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="preload" href="title-sword.png" as="image">
 <script>
-// Stage the title reveal before first paint, unless the player prefers reduced motion. The script after #start plays it.
-if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('intro','wait');
+// Stage the title before first paint: PRESS START over the hushed forest, then the reveal, unless the player prefers reduced motion. The script after #start plays them.
+document.documentElement.classList.add('gate');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('intro','wait');
 </script>
 <style>
 @font-face{font-family:WildsText;src:url("VT323-Regular.ttf") format("truetype");font-weight:400;font-display:swap}
@@ -45,7 +45,7 @@ dialog[data-pad=scroll] form{position:sticky;bottom:-20px;margin:0 -20px -20px;p
 .twinkle{position:absolute;left:calc((var(--px) - 7)*var(--s)*1px);top:calc((var(--py) - 7)*var(--s)*1px);width:calc(16px*var(--s));height:calc(16px*var(--s));background:url('sparkle.png') 0 0/auto 100% no-repeat;image-rendering:pixelated;opacity:0;animation:glimmer 8s var(--d) infinite}.tip{top:calc(100% - 8px*var(--s))}
 .shade,.dusk,.flash{position:absolute;pointer-events:none}.shade{inset:-25% -60%;z-index:-3;background:radial-gradient(26% 32% at 32% 42%,#020d0a59,#0000),radial-gradient(20% 28% at 70% 64%,#020d0a40,#0000);animation:canopy 48s ease-in-out infinite alternate}.dusk{inset:0;z-index:-2;background:#020a08;opacity:0}.flash{inset:0;z-index:1;background:#fffbe8;opacity:0}
 @media(prefers-reduced-motion:reduce){.shade,.twinkle{animation:none}}@keyframes canopy{from{transform:translateX(-10%)}to{transform:translateX(10%)}}@keyframes glimmer{0%{opacity:1;background-position:0 0;animation-timing-function:steps(5)}4.5%{opacity:1;background-position:calc(-80px*var(--s)) 0}4.51%,to{opacity:0}}
-/* Title reveal, under 3 s: the letters stamp in and the sword drops behind them. It stops dead and the title block recoils for three frames, then one cream frame lifts the dusk and fades out in steps.
+/* Title reveal, under 3 s: the letters stamp in and the sword drops behind them. It stops dead, ringing on that frame (title-sound.js), and the title block recoils for three frames, then one cream frame lifts the dusk and fades out in steps.
    A stepped white shine band crosses the letters from the M's first frame; where it crosses the blade a glint slash runs down the steel behind them in step with it,
    a star flares on the point, holds at full size for six frames and fades, and the menu fades up.
    Every animation ends on the resting style, so settling (removing .intro) changes nothing on screen. Buttons only fade, so a click always lands where it aims.
@@ -58,9 +58,14 @@ dialog[data-pad=scroll] form{position:sticky;bottom:-20px;margin:0 -20px -20px;p
 .intro .sword{animation:plunge .42s cubic-bezier(.4,0,.8,.6) .95s backwards}.intro .sword:after{content:"";position:absolute;inset:calc(33px*var(--s)) calc(16px*var(--s)) calc(5px*var(--s));background:url('title-sword.png') calc(-207px*var(--s)) 0/calc(216px*var(--s)) calc(38px*var(--s)) no-repeat;animation:glint .45s steps(27) 1.52s both}
 .intro h1:after{content:"";position:absolute;left:calc(50% + .11em - 10.5px*var(--s));bottom:calc(.12em - 6px - (var(--t) + 10)*var(--s)*1px);width:calc(21px*var(--s));height:calc(21px*var(--s));background:url('title-sword.png') calc(-123px*var(--s)) 0/calc(216px*var(--s)) calc(38px*var(--s)) no-repeat;image-rendering:pixelated;opacity:0;pointer-events:none;animation:star .39s step-end 1.84s}
 .intro .subtitle{animation:rise .45s ease-out 2.1s backwards}.intro .modes .primary{animation:appear .4s ease-out 2.2s backwards}.intro .modes .endless{animation-delay:2.28s}.intro .menu-links button{animation:appear .4s ease-out 2.36s backwards}.intro .menu-links button+button{animation-delay:2.42s}.intro .menu-links button+button+button{animation-delay:2.48s}.intro .footnote{animation:appear .45s ease-out 2.5s backwards}
-.wait #start,.wait #start *,.wait #start:before,.wait #start:after,.wait #start *:before,.wait #start *:after{animation-play-state:paused!important}
+.wait #start :not(.mote,.shade,.blink),.wait #start *:before,.wait #start *:after{animation-play-state:paused!important}
 @keyframes dawn{from,to{opacity:.86}}@keyframes flash{0%{opacity:1}33.3%{opacity:.66}66.6%,to{opacity:.33}}@keyframes thump{from,to{transform:translateY(calc(3px*var(--s)))}}@keyframes rise{from{opacity:0;transform:translateY(8px)}}@keyframes rule{from{transform:scaleX(0)}}@keyframes appear{from{opacity:0}}
 @keyframes stamp{0%{opacity:0;transform:translateY(-.24em);animation-timing-function:cubic-bezier(.5,0,1,.6)}1%{opacity:1}60%{transform:translateY(.03em);animation-timing-function:ease-out}to{transform:none}}@keyframes plunge{from{transform:translateY(calc(-50vh - 50%))}}@keyframes glint{from{background-position-y:calc(-1.7496em - 5.5px*var(--s))}to{background-position-y:calc(3.1216em - 5.5px*var(--s))}}@keyframes star{0%,to{opacity:1;background-position-x:calc(-123px*var(--s))}8.5%,80%{background-position-x:calc(-144px*var(--s))}21%,67%{background-position-x:calc(-165px*var(--s))}41%{background-position-x:calc(-186px*var(--s))}92%{background-position-x:calc(-123px*var(--s))}}@keyframes shine{from{background-position:calc(-3.4892em - var(--lx,9em)) calc(.0198em - var(--ly,0em))}to{background-position:calc(1.3821em - var(--lx,9em)) calc(.0198em - var(--ly,0em))}}
+/* PRESS START (title-sound.js): the title waits, its menu hidden and the forest dimmed and hushed, its motes still drifting, for any key, click, tap or controller button, which lets its sound play.
+   The whole screen is its button, so a tap anywhere presses it and the tap's click lands on it, not on the menu showing under it; then it goes. It blinks in the game's lettering, two thirds on and one off. */
+#press-start{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;margin:0;padding:22vh 12px 0;background:none;border:0;outline:none;box-shadow:none;color:#efda9f;font-family:WildsText,monospace;font-size:30px;letter-spacing:.3em;text-transform:uppercase;text-shadow:0 3px #3a2412,0 0 14px #020a08;cursor:pointer;-webkit-tap-highlight-color:transparent}
+html:not(.gate) #press-start{color:transparent;text-shadow:none;cursor:auto}.gate .title-content,.gate .footnote{visibility:hidden}.gate .dusk{opacity:.86}
+.blink{animation:blink 1.2s step-end infinite}@keyframes blink{67%{opacity:0}}@media(prefers-reduced-motion:reduce){.blink{animation:none}}
 </style>
 <link rel="stylesheet" href="ui-toolkit.css">
 <link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
@@ -72,23 +77,48 @@ dialog[data-pad=scroll] form{position:sticky;bottom:-20px;margin:0 -20px -20px;p
 <section id="start" aria-label="Title screen">
 <i class="mote" aria-hidden="true"></i><i class="mote" aria-hidden="true"></i><i class="mote" aria-hidden="true"></i><i class="mote" aria-hidden="true"></i><i class="shade" aria-hidden="true"></i><i class="dusk" aria-hidden="true"></i><i class="flash" aria-hidden="true"></i>
 <div class="title-content"><p class="eyebrow">The adventure awaits</p><h1><i class="sword" aria-hidden="true"><i class="twinkle" style="--px:20;--py:25;--d:6s"></i><i class="twinkle tip" style="--px:20;--d:7s"></i></i><span class="sr">Mystic Woods</span><span class="logo" aria-hidden="true"><span><b style="--i:0" data-c="M">M</b><b style="--i:1;--k:-.03em" data-c="Y">Y</b><b style="--i:2;--k:-.02em" data-c="S">S</b><b style="--i:3;--k:-.02em" data-c="T">T</b><b style="--i:4" data-c="I">I</b><b style="--i:5;--k:-.02em" data-c="C">C</b></span><span><b style="--i:6" data-c="W">W</b><b style="--i:7" data-c="O">O</b><b style="--i:8" data-c="O">O</b><b style="--i:9" data-c="D">D</b><b style="--i:10" data-c="S">S</b></span></span></h1><p class="subtitle">Choose your path</p><div class="modes"><button class="primary" id="play" data-mode="story">Story Mode</button><button class="primary endless" id="endless" data-mode="endless">Endless Wilds</button></div><nav class="menu-links" aria-label="Game menus"><button class="secondary" id="help"><img src="ui-symbols/help.png" alt="" aria-hidden="true">How to play</button><button class="secondary" id="sound"><img src="ui-symbols/settings.png" alt="" aria-hidden="true">Sound</button><button class="secondary" id="news"><img src="ui-symbols/reward.png" alt="" aria-hidden="true">What's new</button></nav><p id="status" role="status"></p><progress id="progress" aria-label="Loading game" hidden></progress></div>
-<p class="footnote">A little courage. A little luck. One more depth.</p></section>
+<p class="footnote">A little courage. A little luck. One more depth.</p>
+<button id="press-start" type="button"><span class="blink">Press start</span></button></section>
+<script src="title-sound.js"></script>
 <script>
-// Title reveal: plays once the title can be seen, then settles. Any key, click, tap or controller press (pad.js) settles it at once.
+// Title: the forest waits, hushed, behind PRESS START for any key, click, tap or controller button (pad.js), and that press lets the title's sound play (title-sound.js).
+// The reveal plays once the title can be seen, and settles; another press settles it at once, though not in the first half second, so a double press still sees it.
+// The sword rings on the frame it stops dead, and the title theme follows. Without title-sound.js the title plays as it always has, in silence.
 (()=>{
- const root=document.documentElement;
- if(!root.classList.contains('intro'))return;
- let timer;
- const settle=()=>{root.classList.remove('intro','wait');clearTimeout(timer);for(const type of ['keydown','pointerdown','wilds-pad'])removeEventListener(type,settle,true);};
- for(const type of ['keydown','pointerdown','wilds-pad'])addEventListener(type,settle,true);
- whenSeen(()=>{if(root.classList.contains('intro')){placeShine();root.classList.remove('wait');timer=setTimeout(settle,3000);}});
+ const root=document.documentElement,Title=window.WildsTitleSound,prompt=document.getElementById('press-start'),content=document.querySelector('.title-content');
+ const sound=window.titleSound=Title?Title.create(window):null,art=loaded();
+ let timer,skips=()=>{};
+ if(Title){content.inert=true;Title.gate(window,open,prompt);Title.watch(document,'plunge',()=>sound.land());}
+ else open(null);
 
- // Waits for the logo font and sword art (1.2 s at most), a visible tab, and no rotate prompt.
- function whenSeen(reveal){
+ // The press: PRESS START goes, the sound wakes, and the title shows once it can be seen.
+ function open(press){
+  root.classList.remove('gate');content.inert=false;
+  if(sound)sound.unlock();
+  shield(press);
+  if(Title&&root.classList.contains('intro')){const from=performance.now()+500;skips=Title.presses(window,()=>{if(performance.now()>=from)settle();});}
+  art.then(()=>onScreen(show));
+ }
+ // A tap's click comes after its press: it lands on PRESS START, not on the menu showing under it, and PRESS START goes.
+ function shield(press){
+  if(!press||press.type!=='pointerdown'){prompt.hidden=true;return;}
+  prompt.addEventListener('click',()=>{prompt.hidden=true;},{once:true});
+  setTimeout(()=>{prompt.hidden=true;},700);
+ }
+ // The reveal plays; without it, for reduced motion, the title is simply there, and the sword rings at once.
+ function show(){
+  if(!root.classList.contains('intro'))return sound&&sound.land();
+  placeShine();root.classList.remove('wait');timer=setTimeout(settle,3000);
+ }
+ function settle(){root.classList.remove('intro','wait');clearTimeout(timer);skips();if(sound)sound.land();}
+
+ // The logo font and sword art, or 1.2 s, whichever comes first.
+ function loaded(){
   const sword=new Image();sword.src='title-sword.png';
   const art=Promise.all([document.fonts.load('700 1em WildsPixel'),sword.decode()]).catch(()=>{});
-  Promise.race([art,new Promise(done=>setTimeout(done,1200))]).then(()=>onScreen(reveal));
+  return Promise.race([art,new Promise(done=>setTimeout(done,1200))]);
  }
+ // A visible tab, and no rotate prompt.
  function onScreen(reveal){
   const upright=matchMedia('(orientation:portrait) and (pointer:coarse)');
   if(document.hidden)return document.addEventListener('visibilitychange',()=>onScreen(reveal),{once:true});
@@ -125,17 +155,21 @@ if(Array.isArray(releases)&&releases.length){
   article.append(date,heading,list);content.append(article);
  }
 }
-const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":6279864,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":6305268,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const engine=new Engine(config);
 const play=document.getElementById('play'),status=document.getElementById('status'),progress=document.getElementById('progress');
 // Controllers and the keyboard's arrows on the title screen (pad.js); the page still works without it.
 const Pad=window.WildsPad||{init(){},suspend(){},resume(){},opened(){return false;}};
 Pad.init(window);
+// The title's sound (title-sound.js): the sliders set it live, and its theme dips under a window, but for the Sound window, where it plays as they set it.
+const Sound=window.titleSound||{level(){},duck(){},fadeOut(){}};
+const dialogs=[...document.querySelectorAll('dialog')],quieted=()=>Sound.duck(dialogs.some(dialog=>dialog.open&&dialog.id!=='sound-dialog'));
+for(const dialog of dialogs)new MutationObserver(quieted).observe(dialog,{attributes:true,attributeFilter:['open']});
 for(const name of ['help','sound','news']) document.getElementById(name).addEventListener('click',()=>{const dialog=document.getElementById(name+'-dialog');dialog.showModal();if(!Pad.opened(dialog))dialog.querySelector('h2').focus();});
 for(const kind of ['music','effects']){
  const slider=document.getElementById(kind),label=document.getElementById(kind+'-value');
  try{const saved=localStorage.getItem('wilds-'+kind);if(saved!==null&&Number.isFinite(Number(saved)))slider.value=Math.max(0,Math.min(100,Number(saved)*100));}catch{}
- const update=()=>{slider.style.setProperty('--fill',slider.value+'%');label.value=slider.value+'%';try{localStorage.setItem('wilds-'+kind,Number(slider.value)/100);}catch{}};
+ const update=()=>{slider.style.setProperty('--fill',slider.value+'%');label.value=slider.value+'%';Sound.level(kind,Number(slider.value)/100);try{localStorage.setItem('wilds-'+kind,Number(slider.value)/100);}catch{}};
  slider.addEventListener('input',update);update();
 }
 const endless=document.getElementById('endless'),nameDialog=document.getElementById('name-dialog'),nameInput=document.getElementById('hero-name');
@@ -169,18 +203,21 @@ function savedStory(){
 endless.addEventListener('click',()=>start([]));
 async function start(args){
  // Dev link: ?map=N opens crypt layout N.
- const map=new URLSearchParams(location.search).get('map');
+ const params=new URLSearchParams(location.search),map=params.get('map');
  if(map!==null&&/^[0-9]$/.test(map))args=args.concat(['--map='+map]);
+ // ?perf=1 shows the frame meter; ?bench=1 runs the benchmark in the Wilds instead (scripts/perf).
+ if(params.has('perf'))args=args.concat(['--perf']);
+ if(params.has('bench'))args=['--bench'];
  play.disabled=endless.disabled=true;status.textContent='Opening the forest…';progress.hidden=false;
  const reload=text=>{closed=true;play.textContent=text;play.disabled=false;endless.hidden=true;};
  try {
   const missing=Engine.getMissingFeatures({threads:false});
   if(missing.length)throw new Error('This browser needs '+missing.join(', ')+'. Try updating iPadOS.');
   await engine.startGame({args:args.length?['--'].concat(args):[],onProgress:(current,total)=>{if(total>0){progress.max=total;progress.value=current;}},onExit:()=>{status.textContent='The game has closed. Reload to play again.';document.getElementById('start').hidden=false;reload('Reload game');Pad.resume();}});
-  // The game has the controllers from here; the title screen takes them back if it closes.
+  // The game has the controllers and the speakers from here, the title theme fading out as the forest appears; the title screen takes the controllers back if it closes.
   // A window opened while the forest loaded goes with the title screen.
   for(const dialog of document.querySelectorAll('dialog[open]'))dialog.close();
-  document.getElementById('start').hidden=true;Pad.suspend();document.getElementById('canvas').focus();
+  document.getElementById('start').hidden=true;Pad.suspend();Sound.fadeOut();document.getElementById('canvas').focus();
  }catch(error){status.textContent='Could not open the game. '+error.message;reload('Reload and try again');progress.hidden=true;}
 }
 document.addEventListener('contextmenu',event=>event.preventDefault());

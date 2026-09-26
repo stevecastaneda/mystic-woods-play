@@ -2,6 +2,33 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Press start!',
+    changes: [
+      'The title screen now waits in the dark woods for you. Press any key or button, or tap the screen, and watch the legendary sword fall!',
+      'A hush, then SHIIIING! The sword rings out the moment it lands, and a brand-new heroic theme plays while you pick your game.',
+      'The music keeps playing while you look around the menus. Set the Music and Effects sliders in the Sound window and the title listens right away.'
+    ]
+  },
+  {
+    date: 'September 26, 2026',
+    title: 'Easy does it!',
+    changes: [
+      "Opening chests and doors, reading the sign, lifting pots, resting and crafting just work when you're close. Walk up, face it, press Use. No lining up needed!",
+      'A little label over it shows what the button will do, like "E Open" or "X Lift". On a touch screen the hand button lights up.',
+      'Pots only lift when they are right in front of you, so a swing in a fight never picks one up by mistake.',
+      'Playing with a friend? Charlotte gets her own label in her own color.'
+    ]
+  },
+  {
+    date: 'September 26, 2026',
+    title: 'Smoother!',
+    changes: [
+      'The game runs smoother on iPads, most of all at night with a crowd of monsters, and when you play with a friend.',
+      'Fewer hiccups the first time you hit a new kind of monster, and while monsters chase you through the forest.'
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Fireflies!',
     changes: [
       'The little glowing bugs from the main menu live in the forest now! As night falls they rise out of the grass and bushes and drift in slow loops round the trees.',

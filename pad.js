@@ -8,6 +8,10 @@
 // selection is on, B deletes one, and Start begins. A finger taps the letters, and the
 // keyboard still types into the name.
 //
+// Any press of any button tells the page (wilds-pad), as a key does, so it ends the
+// title's reveal; at the title's PRESS START (title-sound.js) it presses that instead,
+// and does nothing here.
+//
 // The core is pure, for node --test (pad.test.js): what a controller holds, the presses
 // and repeats that makes, where a direction goes among rows of controls, and a name's
 // letters. Once the game starts the canvas has the controllers, so the page stops
@@ -44,6 +48,7 @@
 	// replaces, as typing over the keyboard's selected name does.
 	let fresh = false;
 	const repeater = createRepeater();
+	const anyButton = createRepeater();
 
 	// Wires the title screen to controllers and the keyboard's arrows.
 	function init(window) {
@@ -52,11 +57,11 @@
 		buildLetters();
 		setLead(connected().length ? 'pad' : 'keys');
 		// A controller shows itself with its first press (Safari's first, on an iPad), which
-		// only wakes it: the selection shows, and the title's reveal ends.
+		// only wakes it: the selection shows, and the title's reveal ends. At PRESS START,
+		// it presses that.
 		win.addEventListener('gamepadconnected', () => {
 			setLead('pad');
-			win.dispatchEvent(new Event('wilds-pad'));
-			wake();
+			if (announce(false)) wake();
 			poll();
 		});
 		win.addEventListener('keydown', onKey);
@@ -102,6 +107,7 @@
 		if (polling || suspended || !connected().length) return;
 		polling = true;
 		repeater.reset();
+		anyButton.reset();
 		win.requestAnimationFrame(tick);
 	}
 
@@ -112,13 +118,20 @@
 			return;
 		}
 		const presses = repeater.update(heldBy(pads), now);
-		if (presses.length) {
-			// Any press ends the title's reveal at once, as a key or a tap does.
-			win.dispatchEvent(new Event('wilds-pad'));
+		// Any button at all counts as a press for the title, as any key does.
+		const pressing = anyButton.update(pressedBy(pads), now).some((press) => !press.repeat) || presses.some((press) => !press.repeat);
+		if (presses.length || pressing) {
 			setLead('pad');
+			if (announce(!pressing)) for (const press of presses) act(press.control, press.repeat);
 		}
-		for (const press of presses) act(press.control, press.repeat);
 		win.requestAnimationFrame(tick);
+	}
+
+	// Tells the page a controller pressed something, or held it on (`repeat`): the title's
+	// reveal ends at once, as it does for a key or a tap. The title's PRESS START takes a
+	// press for itself by cancelling it: false then, and the press does nothing more.
+	function announce(repeat) {
+		return win.dispatchEvent(new win.CustomEvent('wilds-pad', { cancelable: true, detail: { repeat } }));
 	}
 
 	function connected() {
@@ -129,6 +142,12 @@
 	function heldBy(pads) {
 		const all = new Set();
 		for (const pad of pads) for (const control of held(pad)) all.add(control);
+		return all;
+	}
+
+	function pressedBy(pads) {
+		const all = new Set();
+		for (const pad of pads) for (const button of pressed(pad)) all.add(button);
 		return all;
 	}
 
@@ -352,6 +371,18 @@
 		return holding;
 	}
 
+	// Every button `pad` holds, by its index, whatever it does on the title screen: PRESS
+	// START takes any button, as it takes any key.
+	function pressed(pad) {
+		const holding = new Set();
+		const buttons = (pad && pad.buttons) || [];
+		for (let index = 0; index < buttons.length; index++) {
+			const button = buttons[index];
+			if (button && (button.pressed || button.value > 0.5)) holding.add(index);
+		}
+		return holding;
+	}
+
 	// Turns what's held, frame by frame, into presses: one as a control goes down, then,
 	// while it's held, a repeat after `delay` and every `every` ms after. What's already
 	// held when a controller is first seen waits to be let go, so the press that wakes a
@@ -440,7 +471,7 @@
 
 	return {
 		init, suspend, resume, opened,
-		held, createRepeater, rowsOf, move, typed, erased,
+		held, pressed, createRepeater, rowsOf, move, typed, erased,
 		BUTTONS, DEADZONE, REPEAT_DELAY, REPEAT_EVERY, NAME_LENGTH, DEFAULT_NAME, LETTERS,
 	};
 });

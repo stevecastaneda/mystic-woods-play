@@ -2,6 +2,14 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Steady bars!',
+    changes: [
+      "A monster's health bar and its warning \"!\" now always float right above its head. They stay put when it turns, hops or gets knocked back.",
+      'Fight up close and the bar fades so you can still see your hero, but the "!" stays bright, so you always know when to dodge.'
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'The Mystic Sword!',
     changes: [
       'A legendary sword is hidden deep in the woods. The Mystic Sword is the only weapon that fires a sword beam, just like the Master Sword in A Link to the Past!',

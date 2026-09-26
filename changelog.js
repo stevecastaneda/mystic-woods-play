@@ -2,6 +2,16 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Lift and throw!',
+    changes: [
+      'Walk up to a clay pot and press interact to lift it high over your head, just like A Link to the Past! You tuck your weapon away while you carry it.',
+      'Throw it at a monster and it smashes with a star and a shower of shards that knocks the monster flying. Some pots hide a coin or a heart!',
+      'Pots shatter on trees and crypt walls, splash into the lake and tumble into pits. Get hit while you carry one and it drops and breaks.',
+      'Charlotte can lift and throw pots too!'
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Bonk!',
     changes: [
       'Dash straight into a tree, a wall or a pot and you bounce off with a thud, a burst of stars and a little hop.',

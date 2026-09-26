@@ -2,6 +2,24 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 25, 2026',
+    title: 'A legendary opening',
+    changes: [
+      'The title screen opens like a legend: gold letters stamp in one by one, a sword falls from the sky behind them and lands with a flash, and a shine sweeps across the logo.',
+      'Press any key or tap to skip straight to the menu.',
+      'The title is bigger and sharper on laptops, iPads and big screens.'
+    ]
+  },
+  {
+    date: 'September 25, 2026',
+    title: 'Treasure, hand-drawn',
+    changes: [
+      'Every find you hold up from a chest is now drawn by hand for what it is: gloves, boots, leggings, helmets, armor, shields, and each kind of weapon.',
+      "Each one comes in the very colors your hero wears it in, so leather looks like leather and steel shines like steel, trimmed in its rarity's color.",
+      "Level ups now hold up a woodcutter's axe for Woodcutting and a pickaxe for Mining."
+    ]
+  },
+  {
+    date: 'September 25, 2026',
     title: 'Play together',
     changes: [
       'Plug a second controller into the iPad and press any button on it. Charlotte joins the adventure, and that controller plays her!',

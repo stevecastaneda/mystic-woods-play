@@ -15,6 +15,7 @@ window.WILDS_CHANGELOG = [
     changes: [
       "Monsters don't just pop in anymore. A jelly's shadow grows on the ground, then it drops from the sky, squishes flat and bounces into place.",
       'Skeletons dig their way up: the ground cracks, a mound heaves, and a skull pokes out of a hole before they climb free.',
+      'A landing jelly now splashes a fountain of droplets, and the ground trembles and the dirt flies before a skeleton climbs out and its hole closes up behind it.',
       "Fair fights: a monster that's still arriving can't hurt you, and you can't hit it until it's all the way in."
     ]
   },

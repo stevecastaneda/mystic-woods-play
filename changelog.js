@@ -2,6 +2,16 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Heads up!',
+    changes: [
+      'The top of the screen is one clean strip, like A Link to the Past: your dash boot and hearts on the left, a gold coin purse and the floor in the middle, and your bag on the right, all in crisp outlined pixel numbers.',
+      'Six runes light up green, one for each monster you defeat. Light all six and a glow runs along them as the way on opens.',
+      "Your coins roll up and down with a soft tick, even at the merchant's counter as you pay.",
+      "Charlotte's corner matches the strip, and the call for Player 2 and your Story goal are lettered in the same crisp pixel capitals."
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Nothing in your way',
     changes: [
       "Monster health bars ride just over each monster's head, even mid-hop, and never cover your hero or Charlotte. When a monster crowds in close, its bar moves to a clear spot instead.",

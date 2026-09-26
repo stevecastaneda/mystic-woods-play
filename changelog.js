@@ -2,6 +2,14 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 25, 2026',
+    title: 'Cut the grass, smash the pots',
+    changes: [
+      'Your sword now cuts grass and flowers: clippings flutter away, and now and then a coin or heart turns up.',
+      'Clay pots in the camp and crypt corners shatter when struck, and sometimes hold something.'
+    ]
+  },
+  {
+    date: 'September 25, 2026',
     title: 'Crisp damage numbers',
     changes: [
       'Damage numbers are sharp new pixel digits that ride along with the monster you hit, then pop up over its health bar.',

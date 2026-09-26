@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Giant glow-up!',
+    changes: [
+      "At night Hollowoak's glowing eyes, embers and slam ring sit right on the giant, and your sword and its swing always stay in front of the glow.",
+      'Knock it to half health and it turns red the instant your blow lands, whoever lands it. Its flashes stay gentle on your eyes, even when you mash away!',
+      'No more stutter when you hit the giant. ANGRY! now sits snug beside its face, and your final blow lights up the fallen giant.'
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Menus for controllers!',
     changes: [
       'Every menu works with your controller now! Move the shiny gold frame with the D-pad, press A to choose and B to go back.',

@@ -2,12 +2,20 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 25, 2026',
+    title: 'Your hero, as drawn',
+    changes: [
+      'Treasure from a chest now floats just over your hero\'s head, and your hero stays exactly as drawn: no more stiff painted-on arms.',
+      'Level ups show their prize the same way, over the head of your hero.'
+    ]
+  },
+  {
+    date: 'September 25, 2026',
     title: 'Treasure, held high',
     changes: [
-      'Open a chest and your hero turns to you and hoists the treasure high overhead, fists together, just like A Link to the Past.',
+      'Open a chest and your hero turns to you as the treasure rises high over their head, just like A Link to the Past.',
       "The rarer the find, the bigger the moment: a wider glow in its rarity's color (gray, green, blue, purple or gold), more rays, and a burst of light for Epic and Legendary finds. Legendary finds flash the whole screen and send a ring of light racing out.",
       'Its name shows in big letters and stays up long enough to read. Any button puts it away when you are ready.',
-      'Level ups get the same pose, with the prize ringed in gold: a log, a stone, a smith\'s hammer, or your own weapon for Combat.'
+      'Level ups show their prize the same way, ringed in gold: a log, a stone, a smith\'s hammer, or your own weapon for Combat.'
     ]
   },
   {

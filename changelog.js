@@ -2,6 +2,14 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Fireflies!',
+    changes: [
+      'The little glowing bugs from the main menu live in the forest now! As night falls they rise out of the grass and bushes and drift in slow loops round the trees.',
+      "Walk through them and they float aside. Swing or dash and they scatter, then drift back. By sunrise they're asleep in the grass again."
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Into the dark!',
     changes: [
       'Monsters stay in sight all through sunset now, and they come back into view as the sun rises.',

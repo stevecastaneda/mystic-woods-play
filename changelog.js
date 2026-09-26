@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'The waystone wakes!',
+    changes: [
+      'A magic waystone now stands at the end of every forest trail. Beat six monsters and it flashes, its rune lights up blue and sparkles burst out!',
+      "Walk up to the open waystone and use it to jump down to the next floor. At night its glowing rune lights up the grass around it.",
+      "Bump into it while it's sealed and it tells you how many monsters are left. It's solid stone, so monsters have to walk around it too!"
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'A lovelier forest!',
     changes: [
       'Dirt trails wind between the landmarks now, with grassy edges and little pebbles. Flowers, mushrooms and tufts grow thickest along the tree lines and the trails.',

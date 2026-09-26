@@ -5,7 +5,8 @@ window.WILDS_CHANGELOG = [
     title: 'Come play!',
     changes: [
       "Plug in a second controller and Charlotte's corner calls out PRESS ANY BUTTON, so Player 2 always knows how to jump in.",
-      'When Charlotte gets back up after fainting, her heart pops in a burst of sparkles and she flashes bright before she is back in the fight.'
+      'When Charlotte gets back up after fainting, her heart pops in a burst of sparkles and she flashes bright before she is back in the fight.',
+      'Help now shows how a second player joins, and how to pause and open your bag on a controller.'
     ]
   },
   {

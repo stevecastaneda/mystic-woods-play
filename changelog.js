@@ -2,6 +2,17 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Your own bag!',
+    changes: [
+      "Playing with a friend? You and Charlotte each have your own bag and your own gear now. Give her an axe and your sword stays right in your hand!",
+      "Press Back on your controller to open your own bag. A bag, the shop or the workbench only listens to the controller that opened it, and Charlotte's show her face and name.",
+      'Gold and materials are still shared. Whatever you buy or craft goes in your own bag, and in Story Mode you each keep what you crafted.',
+      'Charlotte can wear her own shield now and block arrows too!',
+      'In Story Mode, no arrow points to Luke anymore. Finding him is a real search!'
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Fresh starts!',
     changes: [
       'Every Endless Wilds run starts brand new, with an empty bag, the Worn iron sword, no gold and every skill back at level 1.',
@@ -33,7 +44,7 @@ window.WILDS_CHANGELOG = [
     changes: [
       'Shields really work now! Face an arrow or a thorn seed with a shield on and it bounces right off with a bright star and a ting, just like in A Link to the Past.',
       'A blocked shot tumbles away and never costs a heart. Your shield is down while you swing, dash, spin or carry a pot, so time it right. Holding your sword out to charge a spin keeps it up!',
-      "Your backpack and the workbench tell you what a shield does. Charlotte doesn't carry one, so keep her out of the line of fire!",
+      'Your backpack and the workbench tell you what a shield does. Give Charlotte a shield of her own and she can block too!',
       'Pots are tidier too. Dust and hearts land clear of monsters, and shards never fly back round you when you smash a pot in a tight corner.'
     ]
   },

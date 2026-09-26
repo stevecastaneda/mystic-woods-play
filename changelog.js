@@ -2,6 +2,16 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'A lovelier forest!',
+    changes: [
+      'Dirt trails wind between the landmarks now, with grassy edges and little pebbles. Flowers, mushrooms and tufts grow thickest along the tree lines and the trails.',
+      'The lake and the pond have curvy shores with lily pads and rocks.',
+      'The cottage is a cozy stone house with a bed, a bookcase, a desk, a big red rug and plants. The workbench is still inside!',
+      "Watch the trailsides for a fenced yard with a bench, a cobblestone clearing, a long fence or a woodcutter's corner. Every floor sets them somewhere new."
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Critical hits!',
     changes: [
       'A gold number always means a critical hit now. It does double damage, lands with a crunch and only happens about once in twenty swings, so a gold number is a real whoa!',

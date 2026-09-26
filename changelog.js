@@ -2,6 +2,16 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 25, 2026',
+    title: 'Play together',
+    changes: [
+      'Plug a second controller into the iPad and press any button on it. Charlotte joins the adventure, and that controller plays her!',
+      'She swings, spins and dashes with your weapon, opens chests, and has her own hearts in the bottom-left corner.',
+      'Monsters chase whoever is closer, and at night you each carry a light.',
+      'If Charlotte runs out of hearts she faints. Stand inside the pink ring around her and she gets back up three times faster.'
+    ]
+  },
+  {
+    date: 'September 25, 2026',
     title: 'Your hero, as drawn',
     changes: [
       'Treasure from a chest now floats just over your hero\'s head, and your hero stays exactly as drawn: no more stiff painted-on arms.',

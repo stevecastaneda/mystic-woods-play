@@ -2,6 +2,14 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 25, 2026',
+    title: 'Come play!',
+    changes: [
+      "Plug in a second controller and Charlotte's corner calls out PRESS ANY BUTTON, so Player 2 always knows how to jump in.",
+      'When Charlotte gets back up after fainting, her heart pops in a burst of sparkles and she flashes bright before she is back in the fight.'
+    ]
+  },
+  {
+    date: 'September 25, 2026',
     title: 'A legendary opening',
     changes: [
       'The title screen opens like a legend: gold letters stamp in one by one, a sword falls from the sky behind them and lands with a flash, and a shine sweeps across the logo.',

@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Smarter monsters!',
+    changes: [
+      "Monsters don't know you're there until they see or hear you, so you can sneak up from behind! Once one spots you, a \"!\" pops up and it shouts for its friends.",
+      'From floor 3, skeleton guards hold up a shield to protect their archer buddies. The shield blocks every hit, so keep swinging until it breaks, or throw a pot to smash it in one go!',
+      'Monsters take turns now: a few come at you while the rest circle around, and every attack flashes a "!" first so you can dodge.'
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'The waystone wakes!',
     changes: [
       'A magic waystone now stands at the end of every forest trail. Beat six monsters and it flashes, its rune lights up blue and sparkles burst out!',

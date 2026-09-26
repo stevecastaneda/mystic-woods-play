@@ -1,6 +1,15 @@
 // Keep this short and player-facing. Newest releases first; show at most three.
 window.WILDS_CHANGELOG = [
   {
+    date: 'September 26, 2026',
+    title: 'Nothing in your way',
+    changes: [
+      "Monster health bars ride just over each monster's head, even mid-hop, and never cover your hero or Charlotte. When a monster crowds in close, its bar moves to a clear spot instead.",
+      'The gold ! that warns a monster is about to strike always shows out in the open.',
+      'A monster caught between you and Charlotte keeps its bar centered under itself, so you can always tell whose bar it is.'
+    ]
+  },
+  {
     date: 'September 25, 2026',
     title: 'Come play!',
     changes: [

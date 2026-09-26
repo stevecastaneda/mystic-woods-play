@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Pixel perfect',
+    changes: [
+      'Open a chest and your treasure shows up in a pixel text box like A Link to the Past, colored by how rare it is, with your coins in lemon yellow.',
+      'LEVEL UP! slams onto the screen in giant gold pixel letters, and your new perk pops open in its own little box.',
+      "Every menu speaks the same crisp pixel letters under shiny gold titles: pause, the bag, the shop, the workbench, blessings and the end-of-run screen. Even the sleepy z's float up pixel perfect!"
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Word by word',
     changes: [
       "Story scenes talk like A Link to the Past: words type out in a classic pixel text box with a soft blip for every letter, and everyone has their own voice. Luke's is the squeakiest!",

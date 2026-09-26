@@ -2,6 +2,14 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Fresh starts!',
+    changes: [
+      'Every Endless Wilds run starts brand new, with an empty bag, the Worn iron sword, no gold and every skill back at level 1.',
+      'Story Mode still keeps your skills, materials and crafted gear, and playing Endless never changes them.'
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Giant glow-up!',
     changes: [
       "At night Hollowoak's glowing eyes, embers and slam ring sit right on the giant, and your sword and its swing always stay in front of the glow.",

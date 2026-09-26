@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 25, 2026',
+    title: 'Crisp damage numbers',
+    changes: [
+      'Damage numbers are sharp new pixel digits that ride along with the monster you hit, then pop up over its health bar.',
+      'They never cover your hero or pile on top of each other: hit a whole crowd at once and you see one number.',
+      'Killing blows and critical hits flash gold and land with a bigger bounce.'
+    ]
+  },
+  {
+    date: 'September 25, 2026',
     title: 'Smoother woods',
     changes: [
       'Trees now fall and rocks crack without a stutter.',

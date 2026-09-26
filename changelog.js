@@ -2,6 +2,26 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Bonk!',
+    changes: [
+      'Dash straight into a tree, a wall or a pot and you bounce off with a thud, a burst of stars and a little hop.',
+      "Shake the trees! Bonked trees wobble and drop leaves, and some drop a coin, or a heart if you're hurt.",
+      'Just clip the edge of a tree and you slide right around it instead. Charlotte bonks too!',
+      "Twin daggers' dash crits really land now: swing right after a dash for a critical hit."
+    ]
+  },
+  {
+    date: 'September 26, 2026',
+    title: 'Wake the giant!',
+    changes: [
+      'Hollowoak sleeps in its clearing now. Creep close and it rumbles awake: roots burst out of the ground, its eyes blaze, and it stands up with a mighty ROAR!',
+      'A big boss bar with its name fills up at the bottom of the screen, and every hit you land lights the giant up.',
+      "Knock it down to half its health and it gets ANGRY! Its bark burns red and the ground shakes with its roar.",
+      "It can't hurt you while it wakes up, so you and Charlotte can get ready. Whoever walks up first wakes it!"
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Pixel perfect',
     changes: [
       'Open a chest and your treasure shows up in a pixel text box like A Link to the Past, colored by how rare it is, with your coins in lemon yellow.',

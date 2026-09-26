@@ -2,6 +2,26 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Menus for controllers!',
+    changes: [
+      'Every menu works with your controller now! Move the shiny gold frame with the D-pad, press A to choose and B to go back.',
+      'In your bag, press A to pick up a sword, carry it to a slot and press A again to wear it. The spots where it fits light up!',
+      'The shop asks before you spend your coins, and your bag asks before you throw gear away.',
+      'The title screen works with a controller too, and you can spell your name with the D-pad!'
+    ]
+  },
+  {
+    date: 'September 26, 2026',
+    title: 'Shields up!',
+    changes: [
+      'Shields really work now! Face an arrow or a thorn seed with a shield on and it bounces right off with a bright star and a ting, just like in A Link to the Past.',
+      'A blocked shot tumbles away and never costs a heart. Your shield is down while you swing, dash, spin or carry a pot, so time it right. Holding your sword out to charge a spin keeps it up!',
+      "Your backpack and the workbench tell you what a shield does. Charlotte doesn't carry one, so keep her out of the line of fire!",
+      'Pots are tidier too. Dust and hearts land clear of monsters, and shards never fly back round you when you smash a pot in a tight corner.'
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Shiny means rare!',
     changes: [
       'Cloth and Ashwood gear are your everyday finds now, and plate armor and Crownsteel weapons are never plain gray.',

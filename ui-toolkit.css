@@ -1,6 +1,6 @@
 /* Shared game-generated skins, live text and native keyboard semantics. */
 .primary,.secondary{font-family:WildsText,monospace;font-size:24px;min-height:52px;border:9px solid transparent;border-image:url('ui-skins/button.png') 9 fill stretch;background:transparent;border-radius:0;box-shadow:none;text-shadow:1px 1px #101e18;padding:4px 18px;image-rendering:pixelated;color:#eee5c7}
-.primary:hover,.secondary:hover,.primary:focus-visible,.secondary:focus-visible{border-image-source:url('ui-skins/selected.png');transform:none;color:#fff0b8;outline:2px solid #f0d998;outline-offset:2px}
+.primary:hover,.secondary:hover{border-image-source:url('ui-skins/selected.png');transform:none;color:#fff0b8;outline:2px solid #f0d998;outline-offset:2px}
 .primary:active,.secondary:active{border-image-source:url('ui-skins/pressed.png');transform:none}
 .primary:disabled,.secondary:disabled{border-image-source:url('ui-skins/disabled.png');color:#a39d7a;opacity:1}
 .menu-links{gap:10px}.menu-links button{display:inline-flex;align-items:center;justify-content:center;gap:8px}.menu-links img{width:28px;height:28px;image-rendering:pixelated}
@@ -14,4 +14,10 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:24px;height:24px;m
 input[type=range]::-moz-range-track{height:8px;background:#17362a;border:2px solid #593a24;border-radius:0}
 input[type=range]::-moz-range-progress{background:#d6b566;height:8px}
 input[type=range]::-moz-range-thumb{width:24px;height:24px;border:0;border-radius:0;background:url('ui-skins/rune_knob.png') center/contain no-repeat}
-input[type=range]:focus-visible{outline:2px solid #f0d998;outline-offset:4px}
+/* The selection a controller or the keyboard moves (pad.js sets data-lead and marks it .selected), as the game's menus show it: the selected skin in a frame of pixels, dark, gold lit along its top and left, and dark again,
+   under the HUD's gold arrow, bobbing a pixel toward it twice a second. A mouse or a finger leads without them; without pad.js the keyboard's focus still wears the frame. */
+.primary,.secondary{position:relative}
+:is([data-lead=keys],[data-lead=pad]) :is(.primary,.secondary).selected{border-image-source:url('ui-skins/selected.png');color:#fff0b8}
+:is([data-lead=keys],[data-lead=pad]) :is(button,input).selected,html:not([data-lead]) :is(button,input):focus-visible{outline:none;box-shadow:0 0 0 2px #291a14,-2px -2px 0 2px #f7d15a,0 0 0 4px #e0a83e,0 0 0 6px #291a14}
+:is([data-lead=keys],[data-lead=pad]) :is(.primary,.secondary).selected::before{content:"";position:absolute;left:50%;top:-31px;width:22px;height:14px;margin-left:-11px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 7' shape-rendering='crispEdges'%3E%3Cpath fill='%23291a14' d='M0 0h11v1h-11zM0 1h1v1h-1zM10 1h1v1h-1zM1 2h1v1h-1zM9 2h1v1h-1zM2 3h1v1h-1zM8 3h1v1h-1zM3 4h1v1h-1zM7 4h1v1h-1zM4 5h1v1h-1zM6 5h1v1h-1zM5 6h1v1h-1z'/%3E%3Cpath fill='%23fff3b8' d='M1 1h1v1h-1z'/%3E%3Cpath fill='%23f7d15a' d='M2 1h7v1h-7zM2 2h6v1h-6zM3 3h4v1h-4zM4 4h2v1h-2z'/%3E%3Cpath fill='%23e0a83e' d='M9 1h1v1h-1zM8 2h1v1h-1zM7 3h1v1h-1zM6 4h1v1h-1zM5 5h1v1h-1z'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat;image-rendering:pixelated;pointer-events:none;animation:pad-bob .5s step-end infinite}
+@keyframes pad-bob{50%{transform:translateY(2px)}}@media(prefers-reduced-motion:reduce){:is(.primary,.secondary).selected::before{animation:none!important}}

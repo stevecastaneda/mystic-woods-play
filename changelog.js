@@ -2,6 +2,16 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'The Mystic Sword!',
+    changes: [
+      'A legendary sword is hidden deep in the woods. The Mystic Sword is the only weapon that fires a sword beam, just like the Master Sword in A Link to the Past!',
+      "Beat Hollowoak on floor 18 or deeper and its Elder chest might hold it. It's rare, so keep trying!",
+      'With all your hearts full, every swing sends a sparkly beam flying. Get hurt and the beams stop. Heal up and your blade glints to say they are back!',
+      "Beams light up the night, and whoever holds the Mystic Sword fires them, Charlotte too! It is a treasure, so you can't sell it or throw it away for the rest of your run."
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Grab your loot!',
     changes: [
       'Wood, stone, gel and bone always float over to you when you walk up, even when they drop right beside a tree, a rock or a wall.',

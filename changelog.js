@@ -2,6 +2,14 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Grab your loot!',
+    changes: [
+      'Wood, stone, gel and bone always float over to you when you walk up, even when they drop right beside a tree, a rock or a wall.',
+      'Your loot zips round trees and rocks and into your bag the moment it reaches you! Walls and water still keep it on their own side.'
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Your own bag!',
     changes: [
       "Playing with a friend? You and Charlotte each have your own bag and your own gear now. Give her an axe and your sword stays right in your hand!",

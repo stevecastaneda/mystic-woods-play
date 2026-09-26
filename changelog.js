@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Here they come!',
+    changes: [
+      "Monsters don't just pop in anymore. A jelly's shadow grows on the ground, then it drops from the sky, squishes flat and bounces into place.",
+      'Skeletons dig their way up: the ground cracks, a mound heaves, and a skull pokes out of a hole before they climb free.',
+      "Fair fights: a monster that's still arriving can't hurt you, and you can't hit it until it's all the way in."
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Heads up!',
     changes: [
       'The top of the screen is one clean strip, like A Link to the Past: your dash boot and hearts on the left, a gold coin purse and the floor in the middle, and your bag on the right, all in crisp outlined pixel numbers.',

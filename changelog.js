@@ -2,6 +2,23 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Shiny means rare!',
+    changes: [
+      'Cloth and Ashwood gear are your everyday finds now, and plate armor and Crownsteel weapons are never plain gray.',
+      'Every purple or gold treasure is shining plate or Crownsteel!'
+    ]
+  },
+  {
+    date: 'September 26, 2026',
+    title: 'Slick dashes!',
+    changes: [
+      'Slip round corners! Clip the edge of a pillar, pot or chest with a dash and you sidestep right past it instead of bonking.',
+      'Trees play fair from every angle. Dash at the middle of a trunk to bonk off it, or skim its edge and keep on running, with the keys or a stick.',
+      'Bonk a tree from behind and the stars flash on its trunk where you can see them, and every bonk bounces back softly.'
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Lift and throw!',
     changes: [
       'Walk up to a clay pot and press interact to lift it high over your head, just like A Link to the Past! You tuck your weapon away while you carry it.',

@@ -1,6 +1,14 @@
 // Keep this short and player-facing. Newest releases first; show at most three.
 window.WILDS_CHANGELOG = [
   {
+    date: 'September 27, 2026',
+    title: 'Always the newest game!',
+    changes: [
+      'Every time you open the game, you get the newest version, even right after an update. No more old game with new notes!',
+      'The bottom of this window now shows which version you are playing.'
+    ]
+  },
+  {
     date: 'September 26, 2026',
     title: 'Brand-new menus!',
     changes: [

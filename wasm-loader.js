@@ -1,5 +1,6 @@
 // Reassemble the engine as a stream: each hosted asset stays below 25 MiB.
-// Only the engine request is intercepted; game data and audio use ordinary fetch.
+// Only the engine request is intercepted; game data and audio use the page's fetch, and
+// the parts, like every file the page fetches, ask for this build (fresh.js).
 (() => {
   const originalFetch = window.fetch.bind(window);
   const engineUrl = new URL('index.wasm', location.href).href;

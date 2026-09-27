@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Campfire!',
+    changes: [
+      'A crackling campfire now burns at your camp in every forest, right where your adventure starts!',
+      "At night it lights the ground around it in a warm glow, and everyone standing in its light shines in full color. Monsters that creep up to it can't hide!",
+      "Walk up close to hear it snap and pop. It's solid too, so a dash bonks right off it and a thrown pot smashes on its stones!"
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Smarter monsters!',
     changes: [
       "Monsters don't know you're there until they see or hear you, so you can sneak up from behind! Once one spots you, a \"!\" pops up and it shouts for its friends.",

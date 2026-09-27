@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 27, 2026',
+    title: 'Torches and soft light!',
+    changes: [
+      'At night the campfire and the waystone light the ground in soft, smooth pools, just like your lantern. Firelight turns a cozy orange at its edges!',
+      'Torches burn on tall posts beside the waystone, so you can spot the way on from far away in the dark.',
+      'Every cottage and ruin door has a torch on each side, and every flame glows through the night!'
+    ]
+  },
+  {
+    date: 'September 27, 2026',
     title: 'A smoother game!',
     changes: [
       'The game runs smoother at night, near the glowing waystone and in the big fight with Hollowoak, most of all on an iPad.',

@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 27, 2026',
+    title: 'A living forest!',
+    changes: [
+      'Grass and flowers sway aside with a soft rustle as you walk through them, then spring back up. Charlotte, Luke and even the monsters push through them too!',
+      'Now and then a breeze ripples across the meadow and carries a few leaves along with it.',
+      'Every chop at a tree shakes a leaf or two loose.'
+    ]
+  },
+  {
+    date: 'September 27, 2026',
     title: 'Softer light!',
     changes: [
       'The light around your lantern and the campfire fades out softly now, with no ring at its edge. Walk up to the fire and your lights still melt together!',

@@ -2,6 +2,14 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 27, 2026',
+    title: 'Softer light!',
+    changes: [
+      'The light around your lantern and the campfire fades out softly now, with no ring at its edge. Walk up to the fire and your lights still melt together!',
+      'Torches in the crypts light the floor with the same soft glow.'
+    ]
+  },
+  {
+    date: 'September 27, 2026',
     title: 'Torches and soft light!',
     changes: [
       'At night the campfire and the waystone light the ground in soft, smooth pools, just like your lantern. Firelight turns a cozy orange at its edges!',

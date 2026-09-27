@@ -2,6 +2,14 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 27, 2026',
+    title: 'A smoother game!',
+    changes: [
+      'The game runs smoother at night, near the glowing waystone and in the big fight with Hollowoak, most of all on an iPad.',
+      'Everything looks exactly the same, down to the last pixel. The game just does less work to draw it!'
+    ]
+  },
+  {
+    date: 'September 27, 2026',
     title: 'Always the newest game!',
     changes: [
       'Every time you open the game, you get the newest version, even right after an update. No more old game with new notes!',

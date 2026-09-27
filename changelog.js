@@ -2,6 +2,16 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 26, 2026',
+    title: 'Brand-new menus!',
+    changes: [
+      "Your bag, the merchant's shop and the workbench have a cozy new look, like pages from an old adventure book!",
+      'At the shop, press Down from a ware to jump to your bag, and press X to put gear on. The merchant always asks before he takes a coin.',
+      'Flip the workbench pages with L and R. On an iPad, tap a recipe to pick it, then tap CREATE to make it!',
+      "Player 2's windows are pink with her name on top. And 3s, 6s and 9s are easier to read now, so 86 never looks like 88!"
+    ]
+  },
+  {
+    date: 'September 26, 2026',
     title: 'Campfire!',
     changes: [
       'A crackling campfire now burns at your camp in every forest, right where your adventure starts!',

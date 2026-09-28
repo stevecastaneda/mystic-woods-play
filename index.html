@@ -8,9 +8,9 @@
 <title>Mystic Woods · Endless Wilds</title>
 <script>
 // This build's version, stamped by tools/build_web.sh. fresh.js asks for every file by it, and moves an older page to the newest release.
-window.WILDS_BUILD='59bfaf6';
+window.WILDS_BUILD='3736186';
 </script>
-<script src="fresh.js?v=59bfaf6"></script>
+<script src="fresh.js?v=3736186"></script>
 <link rel="preload" href="PixelifySans.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="preload" href="title-sword.png" as="image">
 <script>
@@ -72,7 +72,7 @@ dialog[data-pad=scroll] form{position:sticky;bottom:-20px;margin:0 -20px -20px;p
 html:not(.gate) #press-start{color:transparent;text-shadow:none;cursor:auto}.gate .title-content,.gate .footnote{visibility:hidden}.gate .dusk{opacity:.86}
 .blink{animation:blink 1.2s step-end infinite}@keyframes blink{67%{opacity:0}}@media(prefers-reduced-motion:reduce){.blink{animation:none}}
 </style>
-<link rel="stylesheet" href="ui-toolkit.css?v=59bfaf6">
+<link rel="stylesheet" href="ui-toolkit.css?v=3736186">
 <link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 
@@ -84,7 +84,7 @@ html:not(.gate) #press-start{color:transparent;text-shadow:none;cursor:auto}.gat
 <div class="title-content"><p class="eyebrow">The adventure awaits</p><h1><i class="sword" aria-hidden="true"><i class="twinkle" style="--px:20;--py:25;--d:6s"></i><i class="twinkle tip" style="--px:20;--d:7s"></i></i><span class="sr">Mystic Woods</span><span class="logo" aria-hidden="true"><span><b style="--i:0" data-c="M">M</b><b style="--i:1;--k:-.03em" data-c="Y">Y</b><b style="--i:2;--k:-.02em" data-c="S">S</b><b style="--i:3;--k:-.02em" data-c="T">T</b><b style="--i:4" data-c="I">I</b><b style="--i:5;--k:-.02em" data-c="C">C</b></span><span><b style="--i:6" data-c="W">W</b><b style="--i:7" data-c="O">O</b><b style="--i:8" data-c="O">O</b><b style="--i:9" data-c="D">D</b><b style="--i:10" data-c="S">S</b></span></span></h1><p class="subtitle">Choose your path</p><div class="modes"><button class="primary" id="play" data-mode="story">Story Mode</button><button class="primary endless" id="endless" data-mode="endless">Endless Wilds</button></div><nav class="menu-links" aria-label="Game menus"><button class="secondary" id="help"><img src="ui-symbols/help.png" alt="" aria-hidden="true">How to play</button><button class="secondary" id="sound"><img src="ui-symbols/settings.png" alt="" aria-hidden="true">Sound</button><button class="secondary" id="news"><img src="ui-symbols/reward.png" alt="" aria-hidden="true">What's new</button></nav><p id="status" role="status"></p><progress id="progress" aria-label="Loading game" hidden></progress></div>
 <p class="footnote">A little courage. A little luck. One more depth.</p>
 <button id="press-start" type="button"><span class="blink">Press start</span></button></section>
-<script src="title-sound.js?v=59bfaf6"></script>
+<script src="title-sound.js?v=3736186"></script>
 <script>
 // Title: the forest waits, hushed, behind PRESS START for any key, click, tap or controller button (pad.js), and that press lets the title's sound play (title-sound.js).
 // The reveal plays once the title can be seen, and settles; another press settles it at once, though not in the first half second, so a double press still sees it.
@@ -145,10 +145,10 @@ html:not(.gate) #press-start{color:transparent;text-shadow:none;cursor:auto}.gat
 <dialog id="name-dialog" aria-labelledby="name-title"><h2 id="name-title" tabindex="-1">Who are you?</h2><p>You are the oldest of three. Charlotte and Luke are counting on you.</p><p id="story-saved" hidden>Welcome back! Pick up where you left off, or start the story over from the very beginning.</p><form method="dialog" id="name-form"><label>Your name<input id="hero-name" type="text" maxlength="12" autocomplete="off" spellcheck="false" required></label><div class="letters" id="name-letters" role="group" aria-label="Letters for your name"></div><div class="actions"><button class="primary" id="story-go" value="go">Begin</button><button class="secondary" id="new-story" value="new" hidden>New story</button><button class="secondary" value="cancel" formnovalidate>Back</button></div><p class="pad-hints" aria-hidden="true"><span><kbd>A</kbd>Type</span><span><kbd>B</kbd>Delete</span><span><kbd>Start</kbd><span id="start-hint">Begin</span></span></p></form></dialog>
 <dialog id="news-dialog" aria-labelledby="news-title" data-pad="scroll"><h2 id="news-title" tabindex="-1">What's new</h2><div id="news-content"><p>Recent updates are temporarily unavailable.</p></div><p class="release-date build-version" id="build-version" hidden></p><form method="dialog"><button class="secondary">Back</button></form></dialog>
 <section id="rotate"><h2>Turn your iPad sideways</h2><p>The forest plays best in landscape.</p></section>
-<script src="pad.js?v=59bfaf6"></script>
-<script src="changelog.js?v=59bfaf6"></script>
-<script src="wasm-loader.js?v=59bfaf6"></script>
-<script src="index.js?v=59bfaf6"></script>
+<script src="pad.js?v=3736186"></script>
+<script src="changelog.js?v=3736186"></script>
+<script src="wasm-loader.js?v=3736186"></script>
+<script src="index.js?v=3736186"></script>
 <script>
 const releases=window.WILDS_CHANGELOG;
 if(Array.isArray(releases)&&releases.length){
@@ -162,7 +162,7 @@ if(Array.isArray(releases)&&releases.length){
 }
 const version=document.getElementById('build-version');
 if(window.WildsFresh&&WildsFresh.VERSION.test(window.WILDS_BUILD)){version.textContent='Version '+window.WILDS_BUILD;version.hidden=false;}
-const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":7082264,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const config={"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":7087192,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const engine=new Engine(config);
 const play=document.getElementById('play'),status=document.getElementById('status'),progress=document.getElementById('progress');
 // Controllers and the keyboard's arrows on the title screen (pad.js); the page still works without it.

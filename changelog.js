@@ -1,6 +1,15 @@
 // Keep this short and player-facing. Newest releases first; show at most three.
 window.WILDS_CHANGELOG = [
   {
+    date: 'September 28, 2026',
+    title: 'Berries!',
+    changes: [
+      'Half the trees in the forest grow berries now. Walk up to a berry tree, face its trunk and press Use to shake a few loose!',
+      'Dash into a berry tree for a berry shower. Every chop knocks a berry loose too, and a tree you chop down drops all it has left!',
+      'Bring 5 berries to the workbench to make a Berry Tonic that heals 2 hearts. Charlotte can shake trees too!'
+    ]
+  },
+  {
     date: 'September 27, 2026',
     title: 'A living forest!',
     changes: [

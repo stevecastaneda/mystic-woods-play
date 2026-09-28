@@ -6,7 +6,8 @@ window.WILDS_CHANGELOG = [
     changes: [
       'Every crypt is a real dungeon now, with 5 rooms at first and up to 12 deeper down. Walk through a doorway and the screen scrolls to the next room!',
       'The stairs down are in the guard room, the farthest room from the way in. Beat its monsters to open them, and find the side room that always hides a chest!',
-      'Pause and open the Map to see every room you have explored. Pits have real depth now, and there are pots out on the floor to dash into!'
+      'Pause and open the Map to see every room you have explored. Pits have real depth now, and there are pots out on the floor to dash into!',
+      'Fixed dark bars that could cover part of the forest after you left a crypt.'
     ]
   },
   {

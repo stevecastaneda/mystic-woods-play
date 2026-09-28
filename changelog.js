@@ -7,7 +7,8 @@ window.WILDS_CHANGELOG = [
       'Now and then the sky greys over and rain rolls into the forest. Watch the drops splash in the grass and ripple across the lake!',
       'Storms bring wind, lightning and thunder. Each flash lights up the whole forest for a blink, so watch for monsters hiding in the dark!',
       'The campfire hisses and steams in the rain, and the trees keep dripping for a little while after it stops.',
-      'Behind the scenes, the forest now draws only what is on screen, so tablets have less work to do.'
+      'Behind the scenes, the forest now draws only what is on screen, so tablets have less work to do.',
+      'Fixed rain that slid under the cottage and came out the other side. Now the drops splash on its stone walls, and it never rains inside!'
     ]
   },
   {

@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 28, 2026',
+    title: 'Crypts of many rooms!',
+    changes: [
+      'Every crypt is a real dungeon now, with 5 rooms at first and up to 12 deeper down. Walk through a doorway and the screen scrolls to the next room!',
+      'The stairs down are in the guard room, the farthest room from the way in. Beat its monsters to open them, and find the side room that always hides a chest!',
+      'Pause and open the Map to see every room you have explored. Pits have real depth now, and there are pots out on the floor to dash into!'
+    ]
+  },
+  {
+    date: 'September 28, 2026',
     title: 'Berries!',
     changes: [
       'Half the trees in the forest grow berries now. Walk up to a berry tree, face its trunk and press Use to shake a few loose!',

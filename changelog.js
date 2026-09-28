@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 28, 2026',
+    title: 'Rain and storms!',
+    changes: [
+      'Now and then the sky greys over and rain rolls into the forest. Watch the drops splash in the grass and ripple across the lake!',
+      'Storms bring wind, lightning and thunder. Each flash lights up the whole forest for a blink, so watch for monsters hiding in the dark!',
+      'The campfire hisses and steams in the rain, and the trees keep dripping for a little while after it stops.'
+    ]
+  },
+  {
+    date: 'September 28, 2026',
     title: 'Crypts of many rooms!',
     changes: [
       'Every crypt is a real dungeon now, with 5 rooms at first and up to 12 deeper down. Walk through a doorway and the screen scrolls to the next room!',

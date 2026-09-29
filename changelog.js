@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 29, 2026',
+    title: 'Requests and gold stars!',
+    changes: [
+      'Luke, Charlotte and the Wayfarer need your help! Read the request board at camp, or talk to them to hear what they want.',
+      'Bring them berries, wood, stone, bones and more. Each favour pays coins or a gift, and earns a gold star.',
+      'Fill all five stars for a friend and they give you a keepsake that lasts every run: an extra heart, a sharper sword, or cheaper wares!'
+    ]
+  },
+  {
+    date: 'September 29, 2026',
     title: 'Crypt mazes!',
     changes: [
       'Every crypt is now a maze of small rooms, like a real Zelda dungeon, with up to 20 rooms deep down!',

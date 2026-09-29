@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 29, 2026',
+    title: 'Crypt mazes!',
+    changes: [
+      'Every crypt is now a maze of small rooms, like a real Zelda dungeon, with up to 20 rooms deep down!',
+      'Find the small key to open the locked door, bonk cracked walls open with your Pegasus dash to find secret rooms, and take one-way shortcuts back.',
+      'Fight rooms seal with magic rune light until every monster is beaten. Pause and open the Map to see where you have been!'
+    ]
+  },
+  {
+    date: 'September 29, 2026',
     title: 'Surprises in the woods!',
     changes: [
       'Now and then a forest holds a surprise. Keep your eyes open as you explore!',

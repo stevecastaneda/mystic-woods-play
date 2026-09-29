@@ -1,6 +1,16 @@
 // Keep this short and player-facing. Newest releases first; show at most three.
 window.WILDS_CHANGELOG = [
   {
+    date: 'September 29, 2026',
+    title: 'Build your camp!',
+    changes: [
+      'The camp in Endless Wilds grows now! Read its sign, the Wishing Post, and bring it wood, stone, gel, bone and berries to build something new.',
+      'Build a bench to rest on, berry planters, supply crates for your next run, a tool rack and a Heart Shrine that gives you an extra heart!',
+      'Build the Lantern Ring, and at night monsters stop at the fence and leave you be.',
+      'What you build stays for every run after, even after a fall. Charlotte can bring things too!'
+    ]
+  },
+  {
     date: 'September 28, 2026',
     title: 'Rain and storms!',
     changes: [

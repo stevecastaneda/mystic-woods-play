@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 29, 2026',
+    title: 'The action button!',
+    changes: [
+      'No more jumpy bubbles! A button in the corner now shows what you can do: Talk, Open, Give, Rest and more.',
+      'A little arrow points at the thing you will use. Player 2 gets their own button and a pink arrow.',
+      'On a tablet, the hand button says the word itself.'
+    ]
+  },
+  {
+    date: 'September 29, 2026',
     title: 'Forests that differ!',
     changes: [
       'Every forest is different now! Each one has its own name, shape and mood: green, misty, autumn or deep.',

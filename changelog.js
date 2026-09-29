@@ -2,6 +2,16 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 29, 2026',
+    title: 'Surprises in the woods!',
+    changes: [
+      'Now and then a forest holds a surprise. Keep your eyes open as you explore!',
+      'The Wayfarer sometimes camps beside a trail. Say hello and trade, and look for the treasure he found deep in the woods!',
+      'On a clear night a star may fall! Follow the gold arrow to find it, and take the treasure it holds.',
+      'A berry thief grazes under the berry trees. Catch it before it reaches its den, or shake its log at night while it sleeps!'
+    ]
+  },
+  {
+    date: 'September 29, 2026',
     title: 'Build your camp!',
     changes: [
       'The camp in Endless Wilds grows now! Read its sign, the Wishing Post, and bring it wood, stone, gel, bone and berries to build something new.',

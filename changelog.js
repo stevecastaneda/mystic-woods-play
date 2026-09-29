@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 29, 2026',
+    title: 'Forests that differ!',
+    changes: [
+      'Every forest is different now! Each one has its own name, shape and mood: green, misty, autumn or deep.',
+      'Look for new places like a graveyard, a stone ring and an orchard, and cross the river on its bridges.',
+      'Autumn woods glow orange, red and gold with falling leaves, and misty woods drift with fog!'
+    ]
+  },
+  {
+    date: 'September 29, 2026',
     title: 'Zelda wipes and full screen!',
     changes: [
       'Going down a waystone or crypt stairs now closes a circle on your hero and opens it on the new place, just like in Zelda!',

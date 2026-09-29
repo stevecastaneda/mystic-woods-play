@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 29, 2026',
+    title: 'Gear that wears!',
+    changes: [
+      'In Endless Wilds your sword and armor wear down as you fight. Watch the bar under each item!',
+      'Broken gear is never lost. It just works at half power until you mend it.',
+      'Mend for free at any cottage workbench with wood, stone, gel or bones, or pay the Wayfarer a few coins.'
+    ]
+  },
+  {
+    date: 'September 29, 2026',
     title: 'The action button!',
     changes: [
       'No more jumpy bubbles! A button in the corner now shows what you can do: Talk, Open, Give, Rest and more.',

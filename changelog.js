@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 29, 2026',
+    title: 'Zelda wipes and full screen!',
+    changes: [
+      'Going down a waystone or crypt stairs now closes a circle on your hero and opens it on the new place, just like in Zelda!',
+      'The game fills your whole iPad or phone screen now, with no black bars. You see more of the forest!',
+      'Buttons and hearts stay clear of the notch on phones.'
+    ]
+  },
+  {
+    date: 'September 29, 2026',
     title: 'Requests and gold stars!',
     changes: [
       'Luke, Charlotte and the Wayfarer need your help! Read the request board at camp, or talk to them to hear what they want.',

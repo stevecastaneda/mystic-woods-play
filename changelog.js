@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 29, 2026',
+    title: 'Parchment menus!',
+    changes: [
+      'Every menu now matches the bag and crafting: warm parchment, big buttons and pictures.',
+      'Sound has sliders instead of numbers, and skills show as cards with progress bars.',
+      'The forest name no longer covers your requests.'
+    ]
+  },
+  {
+    date: 'September 29, 2026',
     title: 'Cleaner menus!',
     changes: [
       'No more rings or lit-up buttons after you tap or click. Gamepads still show a gold cursor.',

@@ -1,26 +1,79 @@
-/* Shared game-generated skins, live text and native keyboard semantics. */
-.primary,.secondary{font-family:WildsText,monospace;font-size:24px;min-height:52px;border:9px solid transparent;border-image:url('ui-skins/button.png') 9 fill stretch;background:transparent;border-radius:0;box-shadow:none;text-shadow:1px 1px #101e18;padding:4px 18px;image-rendering:pixelated;color:#eee5c7}
-@media(hover:hover){.primary:hover,.secondary:hover{border-image-source:url('ui-skins/selected.png');transform:none;color:#fff0b8;outline:2px solid #f0d998;outline-offset:2px}}
-.primary:active,.secondary:active{border-image-source:url('ui-skins/pressed.png');transform:none}
-.primary:disabled,.secondary:disabled{border-image-source:url('ui-skins/disabled.png');color:#a39d7a;opacity:1}
-.menu-links{gap:10px}.menu-links button{display:inline-flex;align-items:center;justify-content:center;gap:8px}.menu-links img{width:28px;height:28px;image-rendering:pixelated}
-dialog{border:16px solid transparent;border-image:url('ui-skins/window.png') 16 fill stretch;background:transparent;border-radius:0;box-shadow:0 16px 50px #0008;image-rendering:pixelated;padding:20px;color:#eee5c7}dialog h2{font-family:WildsText,monospace;color:#f0d998}dialog h3{color:#d6b566}dialog::backdrop{background:#06100ddd}
-progress{appearance:none;border:7px solid transparent;border-image:url('ui-skins/well.png') 9 fill stretch;background:#101e18;height:28px;image-rendering:pixelated;border-radius:0}progress::-webkit-progress-bar{background:#101e18}progress::-webkit-progress-value{background:#d6b566}progress::-moz-progress-bar{background:#d6b566}
-input[type=range]{accent-color:#d6b566}dialog{scrollbar-color:#d6b566 #17362a;scrollbar-width:thin}
-@media(max-width:650px){.menu-links{flex-wrap:wrap}.menu-links button{font-size:22px;padding:2px 8px}.menu-links img{width:24px;height:24px}}
-input[type=range]{appearance:none;background:transparent;height:36px;image-rendering:pixelated;cursor:pointer}
-input[type=range]::-webkit-slider-runnable-track{height:18px;border:7px solid transparent;border-image:url('ui-skins/well.png') 9 stretch;background:linear-gradient(to right,#d6b566 var(--fill,50%),#17362a var(--fill,50%));border-radius:0}
-input[type=range]::-webkit-slider-thumb{appearance:none;width:24px;height:24px;margin-top:-10px;background:url('ui-skins/rune_knob.png') center/contain no-repeat;border:0;border-radius:0;image-rendering:pixelated}
-input[type=range]::-moz-range-track{height:8px;background:#17362a;border:2px solid #593a24;border-radius:0}
-input[type=range]::-moz-range-progress{background:#d6b566;height:8px}
-input[type=range]::-moz-range-thumb{width:24px;height:24px;border:0;border-radius:0;background:url('ui-skins/rune_knob.png') center/contain no-repeat}
-/* The browser's own focus ring never shows, as in the game's menus: a click or a tap leaves nothing lit behind it, and a finger's hover
-   (a tablet keeps the last tap hovered) lights nothing, so only a mouse that hovers lights a button. The keys and a controller show the selection below. */
+/* The title page in the game menus' parchment family: its windows, buttons, sliders and name letters wear the parts the game paints for its own menus
+   (menu_art.gd, parchment_kit.gd), two page pixels to each of the art's, which tools/build_web.sh exports into parchment/ (tools/export_web_parts.gd).
+   Words stay live text in the page's letters, and a controller or the keyboard shows its selection in the game's own gold frame (pad.js), never a browser's focus ring. */
+:root{--ink:#33241a;--quiet:#7a5f45;--heading:#2c6a5b;--ivory:#f4ecd8;--outline:#1b1410;--brass:#7d5a1e;--moss:#578935;--bark:#664630;--bark-dark:#493327;--bark-light:#895a39;
+ --lettered:-2px 0 var(--outline),2px 0 var(--outline),0 -2px var(--outline),0 2px var(--outline),-2px -2px var(--outline),2px 2px var(--outline),2px -2px var(--outline),-2px 2px var(--outline)}
 :focus,:focus-visible{outline:none}button,input{-webkit-tap-highlight-color:transparent}
-/* The selection a controller or the keyboard moves (pad.js sets data-lead and marks it .selected), as the game's menus show it: the selected skin in a frame of pixels, dark, gold lit along its top and left, and dark again,
+
+/* Pills: moss for going on, tan for everything else; brighter under the selection or a pointer, sunk while pressed, dry while they can't be pressed. */
+.primary,.secondary{border:0;border-image:url('parchment/pill.png') 20 fill/20px stretch;background:none;box-shadow:none;border-radius:0;height:48px;min-height:48px;padding:0 26px;line-height:44px;font-family:WildsText,monospace;font-size:26px;text-transform:uppercase;color:var(--ivory);text-shadow:var(--lettered);image-rendering:pixelated;filter:none;transform:none;transition:none}
+.secondary{border-image-source:url('parchment/pill_tan.png');color:var(--ink);text-shadow:none}
+/* Only a mouse that hovers lights a pill: a tablet keeps the last tap hovered, and a finger's hover lights nothing. */
+:is([data-lead=keys],[data-lead=pad]) .primary.selected{border-image-source:url('parchment/pill_focused.png');filter:none;transform:none}
+:is([data-lead=keys],[data-lead=pad]) .secondary.selected{border-image-source:url('parchment/pill_tan_focused.png');background:none}
+@media(hover:hover){.primary:hover{border-image-source:url('parchment/pill_focused.png');filter:none;transform:none}}@media(hover:hover){.secondary:hover{border-image-source:url('parchment/pill_tan_focused.png');background:none}}
+.primary:active{border-image-source:url('parchment/pill_pressed.png');line-height:48px}.secondary:active{border-image-source:url('parchment/pill_tan_pressed.png');line-height:48px}
+.primary:disabled,.secondary:disabled{border-image-source:url('parchment/pill_disabled.png');color:#e0dcc8;opacity:1}
+.primary.endless{background:none;box-shadow:none;color:var(--ivory)}
+.modes .primary{width:min(250px,100%)}
+.menu-links{gap:10px}.menu-links button{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:44px;min-height:44px;line-height:40px;font-size:22px;padding:0 20px}.menu-links img{image-rendering:pixelated}
+@media(max-width:650px){.menu-links{flex-wrap:wrap}.menu-links button{font-size:20px;padding:0 14px}}
+@media(max-height:580px){.primary{min-height:48px}}
+
+/* Windows: the menus' dark wood round torn parchment, the title on the green plate over the top rail and the X at its end.
+   Each is as tall as the screen lets it be: its words scroll between the plate and the foot's Back, so a phone held sideways reaches all of them. */
+dialog{border:0;border-image:url('parchment/frame.png') 24 fill/24px round;background:none;box-shadow:0 16px 50px #0008;border-radius:0;color:var(--ink);padding:50px 34px 30px;overflow:visible;max-height:calc(100dvh - 72px);image-rendering:pixelated}
+dialog[open]{display:flex;flex-direction:column}
+dialog::backdrop{background:#04110ee0}
+dialog .scroll{flex:1 1 auto;min-height:0;overflow:auto;margin:0 -12px;padding:0 12px 4px;scrollbar-width:thin;scrollbar-color:var(--bark-light) transparent}
+dialog>form{flex:none;margin:6px -12px 0;padding:10px 12px 0;border-top:2px solid var(--bark-light);box-shadow:inset 0 2px #f4e7c5}
+/* The words fade out over the foot's rule, so a card cut short reads as more below, never as one behind Back. */
+dialog .scroll{-webkit-mask-image:linear-gradient(#000 calc(100% - 18px),#0000);mask-image:linear-gradient(#000 calc(100% - 18px),#0000)}
+dialog .plate{flex:none;display:table;position:relative;margin:-70px auto 16px;height:56px;padding:0 44px;border-image:url('parchment/plate.png') 28 24 fill/28px 24px stretch}
+dialog h2{margin:0!important;font-family:WildsText,monospace;font-size:34px;line-height:50px;color:var(--ivory);text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;text-shadow:var(--lettered),0 4px #263d1c}
+dialog .close{position:absolute;left:calc(100% - 8px);top:4px;width:48px;height:48px;min-height:0;margin:0;padding:0;border:0;background:url('parchment/close.png');image-rendering:pixelated}
+@media(hover:hover){dialog .close:hover{background-image:url('parchment/close_focused.png')}}dialog .close:active{background-image:url('parchment/close_pressed.png')}
+dialog h3{color:var(--heading)}dialog p,dialog label,dialog li{color:var(--ink)}
+dialog output{display:none}
+dialog button{margin-top:14px}
+
+/* Sound: each on a parchment panel headed in teal, a wooden track filled in moss as far as it goes and the brass knob, a quiet speaker and a loud one for how loud: no percent. */
+#sound-dialog label{position:relative;margin:10px 0;padding:8px 14px 12px;border-image:url('parchment/panel.png') 8 fill/8px stretch;color:var(--heading);text-transform:uppercase;font-size:22px}
+#sound-dialog label::before{content:"";position:absolute;left:14px;bottom:20px;width:10px;height:18px;background:url('parchment/speaker_soft.png')}
+#sound-dialog label::after{content:"";position:absolute;right:10px;bottom:20px;width:20px;height:18px;background:url('parchment/speaker.png')}
+#sound-dialog input[type=range]{margin:6px 30px 0;width:calc(100% - 60px)}
+input[type=range]{appearance:none;background:transparent;height:30px;image-rendering:pixelated;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:14px;border:0;border-radius:0;box-shadow:0 0 0 2px var(--outline);background:linear-gradient(var(--bark-dark) 0 2px,transparent 2px calc(100% - 2px),var(--bark-light) calc(100% - 2px)),linear-gradient(to right,var(--moss) var(--fill,50%),var(--bark) var(--fill,50%))}
+input[type=range]::-webkit-slider-thumb{appearance:none;width:14px;height:22px;margin-top:-4px;border:0;border-radius:0;background:url('parchment/knob.png')}
+input[type=range]::-moz-range-track{height:14px;border:0;box-shadow:0 0 0 2px var(--outline);background:var(--bark)}
+input[type=range]::-moz-range-progress{height:14px;background:var(--moss)}
+input[type=range]::-moz-range-thumb{width:14px;height:22px;border:0;border-radius:0;background:url('parchment/knob.png')}
+
+/* Opening the forest: a wooden track filling in moss. */
+progress{appearance:none;border:0;border-radius:0;box-shadow:0 0 0 2px var(--outline);background:var(--bark);height:14px}progress::-webkit-progress-bar{background:var(--bark)}progress::-webkit-progress-value{background:var(--moss)}progress::-moz-progress-bar{background:var(--moss)}
+
+/* The name: a sunk well for it, and the letters as the bag's tan squares, the chosen one cream. */
+#name-dialog p{font-size:20px}
+#name-dialog label{margin:12px 0;color:var(--heading);text-transform:uppercase;font-size:22px}
+#name-dialog input{margin-top:8px;border:0;border-image:url('parchment/well.png') 8 fill/8px stretch;background:none;color:var(--ink);padding:10px 16px}
+.letters button{border:0;border-image:url('parchment/tile.png') 8 fill/8px stretch;background:none;color:var(--ink);font-size:26px;height:34px}
+@media(hover:hover){.letters button:hover{background:none;border-image-source:url('parchment/tile_selected.png')}}
+:is([data-lead=keys],[data-lead=pad]) .letters button.selected{border-image-source:url('parchment/tile_selected.png');background:none;color:var(--ink)}
+.pad-hints{color:var(--ink)}.pad-hints kbd{background:var(--outline);border:0;border-radius:4px;color:var(--ivory)}
+
+/* What's new: each release on a parchment panel headed in teal, its date quiet. */
+#news-dialog article{margin-top:14px;padding:12px 18px 6px;border-image:url('parchment/panel.png') 8 fill/8px stretch}
+#news-dialog h3{color:var(--heading)}#news-dialog li::marker{color:var(--brass)}#news-dialog .release-date{color:var(--quiet)}
+
+/* A phone held sideways: the plate comes inside the frame, over the words. */
+@media(max-height:580px){dialog{max-height:calc(100dvh - 12px);padding:22px 26px 18px}dialog .plate{margin:0 auto 10px}dialog .close{left:auto;right:-58px}.letters button{height:30px}}
+
+/* The selection a controller or the keyboard moves (pad.js sets data-lead and marks it .selected), as the game's menus show it: a frame of pixels, dark, gold lit along its top and left, and dark again,
    under the HUD's gold arrow, bobbing a pixel toward it twice a second. A mouse or a finger leads without them; without pad.js the keyboard's focus still wears the frame. */
 .primary,.secondary{position:relative}
-:is([data-lead=keys],[data-lead=pad]) :is(.primary,.secondary).selected{border-image-source:url('ui-skins/selected.png');color:#fff0b8}
 :is([data-lead=keys],[data-lead=pad]) :is(button,input).selected,html:not([data-lead]) :is(button,input):focus-visible{outline:none;box-shadow:0 0 0 2px #291a14,-2px -2px 0 2px #f7d15a,0 0 0 4px #e0a83e,0 0 0 6px #291a14}
 :is([data-lead=keys],[data-lead=pad]) :is(.primary,.secondary).selected::before{content:"";position:absolute;left:50%;top:-31px;width:22px;height:14px;margin-left:-11px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 7' shape-rendering='crispEdges'%3E%3Cpath fill='%23291a14' d='M0 0h11v1h-11zM0 1h1v1h-1zM10 1h1v1h-1zM1 2h1v1h-1zM9 2h1v1h-1zM2 3h1v1h-1zM8 3h1v1h-1zM3 4h1v1h-1zM7 4h1v1h-1zM4 5h1v1h-1zM6 5h1v1h-1zM5 6h1v1h-1z'/%3E%3Cpath fill='%23fff3b8' d='M1 1h1v1h-1z'/%3E%3Cpath fill='%23f7d15a' d='M2 1h7v1h-7zM2 2h6v1h-6zM3 3h4v1h-4zM4 4h2v1h-2z'/%3E%3Cpath fill='%23e0a83e' d='M9 1h1v1h-1zM8 2h1v1h-1zM7 3h1v1h-1zM6 4h1v1h-1zM5 5h1v1h-1z'/%3E%3C/svg%3E") 0 0/100% 100% no-repeat;image-rendering:pixelated;pointer-events:none;animation:pad-bob .5s step-end infinite}
+/* In a window's foot the arrow stands left of Back, pointing right at it, as the game points at a command: never over the words above. */
+:is([data-lead=keys],[data-lead=pad]) dialog>form :is(.primary,.secondary).selected::before{left:-26px;top:50%;margin:-7px 0 0;transform:rotate(-90deg);animation-name:pad-bob-side}
+@keyframes pad-bob-side{0%{transform:rotate(-90deg)}50%{transform:rotate(-90deg) translateY(2px)}}
 @keyframes pad-bob{50%{transform:translateY(2px)}}@media(prefers-reduced-motion:reduce){:is(.primary,.secondary).selected::before{animation:none!important}}

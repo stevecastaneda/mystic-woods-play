@@ -204,7 +204,8 @@
 		const across = direction === 'left' || direction === 'right';
 		if (across && at.type === 'range') return slide(at, direction === 'right' ? 1 : -1);
 		if (!across && place.dataset.pad === 'scroll') {
-			place.scrollBy(0, (direction === 'down' ? 1 : -1) * SCROLL_STEP);
+			// A window's words scroll in its body, between its plate and its foot (shell.html).
+			(place.querySelector('.scroll') || place).scrollBy(0, (direction === 'down' ? 1 : -1) * SCROLL_STEP);
 			return;
 		}
 		const list = items(place).map((control) => ({ control, rect: control.getBoundingClientRect() }));
@@ -255,10 +256,12 @@
 	}
 
 	// The controls the selection can go to in `place`: never a text field while a
-	// controller leads, as its on-screen keyboard would cover the letters.
+	// controller leads, as its on-screen keyboard would cover the letters, and never a
+	// window's X, which is for a pointer or a finger (B closes the window).
 	function items(place) {
 		return Array.from(place.querySelectorAll('button, input')).filter((control) =>
-			!control.disabled && control.getClientRects().length > 0 && !(lead === 'pad' && control.type === 'text'));
+			!control.disabled && control.getClientRects().length > 0 && !(lead === 'pad' && control.type === 'text') &&
+			!(control.classList && control.classList.contains('close')));
 	}
 
 	function selected(place) {

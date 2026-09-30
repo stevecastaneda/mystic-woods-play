@@ -1,6 +1,15 @@
 // Keep this short and player-facing. Newest releases first; show at most three.
 window.WILDS_CHANGELOG = [
   {
+    date: 'September 30, 2026',
+    title: 'The Waystone Shard!',
+    changes: [
+      'Open your first waystone in Endless Wilds and a glowing chip breaks off. Warm it at the camp fire to make it yours.',
+      'Use it from your bag to go home to camp. The run ends, but you keep everything you carry.',
+      'It takes a moment to glow, and a hit breaks it, so you can\'t escape a fight with it.'
+    ]
+  },
+  {
     date: 'September 29, 2026',
     title: 'Parchment menus!',
     changes: [

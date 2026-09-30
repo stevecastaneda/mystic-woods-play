@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 30, 2026',
+    title: 'The Slime King!',
+    changes: [
+      'Every third crypt ends with a boss: the Slime King, a smug slime tyrant with a broken crown and old bones inside him.',
+      'Watch the floor. It glows red where he is about to land, and his slam sends a red wave you have to dodge or dash through.',
+      'Find the Big Key to open his door. Beat him and his Princes to win a Heart Container!'
+    ]
+  },
+  {
+    date: 'September 30, 2026',
     title: 'The Waystone Shard!',
     changes: [
       'Open your first waystone in Endless Wilds and a glowing chip breaks off. Warm it at the camp fire to make it yours.',

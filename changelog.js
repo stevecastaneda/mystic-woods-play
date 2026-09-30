@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 29, 2026',
+    title: 'Cleaner menus!',
+    changes: [
+      'No more rings or lit-up buttons after you tap or click. Gamepads still show a gold cursor.',
+      'The pause menu shows your goal for the floor, and the Gear tab is gone.',
+      'Fixed a little empty button and the forest name showing over the pause menu.'
+    ]
+  },
+  {
+    date: 'September 29, 2026',
     title: 'Gear that wears!',
     changes: [
       'In Endless Wilds your sword and armor wear down as you fight. Watch the bar under each item!',

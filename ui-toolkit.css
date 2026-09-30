@@ -1,6 +1,6 @@
 /* Shared game-generated skins, live text and native keyboard semantics. */
 .primary,.secondary{font-family:WildsText,monospace;font-size:24px;min-height:52px;border:9px solid transparent;border-image:url('ui-skins/button.png') 9 fill stretch;background:transparent;border-radius:0;box-shadow:none;text-shadow:1px 1px #101e18;padding:4px 18px;image-rendering:pixelated;color:#eee5c7}
-.primary:hover,.secondary:hover{border-image-source:url('ui-skins/selected.png');transform:none;color:#fff0b8;outline:2px solid #f0d998;outline-offset:2px}
+@media(hover:hover){.primary:hover,.secondary:hover{border-image-source:url('ui-skins/selected.png');transform:none;color:#fff0b8;outline:2px solid #f0d998;outline-offset:2px}}
 .primary:active,.secondary:active{border-image-source:url('ui-skins/pressed.png');transform:none}
 .primary:disabled,.secondary:disabled{border-image-source:url('ui-skins/disabled.png');color:#a39d7a;opacity:1}
 .menu-links{gap:10px}.menu-links button{display:inline-flex;align-items:center;justify-content:center;gap:8px}.menu-links img{width:28px;height:28px;image-rendering:pixelated}
@@ -14,6 +14,9 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:24px;height:24px;m
 input[type=range]::-moz-range-track{height:8px;background:#17362a;border:2px solid #593a24;border-radius:0}
 input[type=range]::-moz-range-progress{background:#d6b566;height:8px}
 input[type=range]::-moz-range-thumb{width:24px;height:24px;border:0;border-radius:0;background:url('ui-skins/rune_knob.png') center/contain no-repeat}
+/* The browser's own focus ring never shows, as in the game's menus: a click or a tap leaves nothing lit behind it, and a finger's hover
+   (a tablet keeps the last tap hovered) lights nothing, so only a mouse that hovers lights a button. The keys and a controller show the selection below. */
+:focus,:focus-visible{outline:none}button,input{-webkit-tap-highlight-color:transparent}
 /* The selection a controller or the keyboard moves (pad.js sets data-lead and marks it .selected), as the game's menus show it: the selected skin in a frame of pixels, dark, gold lit along its top and left, and dark again,
    under the HUD's gold arrow, bobbing a pixel toward it twice a second. A mouse or a finger leads without them; without pad.js the keyboard's focus still wears the frame. */
 .primary,.secondary{position:relative}

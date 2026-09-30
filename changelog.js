@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'September 30, 2026',
+    title: 'New enemies!',
+    changes: [
+      'The Grave-Iron Skeleton waits deep in the crypts: dark iron bones, glowing red eyes, and it hits hard.',
+      'The Elder Skeleton is faster and walks the forest at night. Watch for its teal eyes.',
+      'Frost Slimes creep through the misty woods, and they take more hits than the blue ones.'
+    ]
+  },
+  {
+    date: 'September 30, 2026',
     title: 'The Slime King!',
     changes: [
       'Every third crypt ends with a boss: the Slime King, a smug slime tyrant with a broken crown and old bones inside him.',

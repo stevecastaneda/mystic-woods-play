@@ -1,6 +1,15 @@
 // Keep this short and player-facing. Newest releases first; show at most three.
 window.WILDS_CHANGELOG = [
   {
+    date: 'October 4, 2026',
+    title: 'Build your camp your way!',
+    changes: [
+      'When you build something at camp, you carry it. Set it down wherever you like inside the fence.',
+      'A green box shows where it will go. Red means it won\'t fit there.',
+      'Changed your mind? Pick MOVE on the Wishing Post to carry it somewhere new. Your camp stays the way you built it.'
+    ]
+  },
+  {
     date: 'September 30, 2026',
     title: 'New enemies!',
     changes: [

@@ -7,6 +7,11 @@
 // release's address, where nothing is kept yet, so the notes and the game always come
 // from the same release.
 //
+// A page left open while a release goes out finds out too (Steve #785): it asks
+// version.txt again every CHECK_EVERY and whenever the tab comes back into view, and
+// tells the page once for each newer release, so the page can offer the player a
+// refresh (shell.html's update note) instead of leaving them on an old build.
+//
 // The core is pure, for node --test (fresh.test.js): which addresses carry the version,
 // and where a page goes, if anywhere, given the newest one.
 (function (root, factory) {
@@ -16,6 +21,8 @@
 	'use strict';
 	// A build's version: its commit, as git abbreviates it.
 	const VERSION = /^[0-9a-f]{7,40}$/;
+	// How often an open page asks whether a newer release is out.
+	const CHECK_EVERY = 5 * 60 * 1000;
 
 	// Wraps the page's fetch so each of the site's files it fetches asks for this build,
 	// then asks version.txt, past every cache, for the newest release, and goes to it if
@@ -60,6 +67,37 @@
 		return url.href;
 	}
 
-	const api = { install, versioned, newer, VERSION };
+	// Asks version.txt every `every` and as the tab comes back into view, and calls
+	// `told(address, latest)` once for each release newer than the page `win`'s build,
+	// with the address that plays it. Returns {check, stop}; a page that isn't a stamped
+	// build is never told.
+	function watch(win, told, every = CHECK_EVERY) {
+		const build = win.WILDS_BUILD;
+		if (!VERSION.test(build || '')) return { check() { return Promise.resolve(); }, stop() {} };
+		let shown = null;
+		const check = () => win.fetch(new URL('version.txt?t=' + Date.now(), win.location.href).href, { cache: 'no-store' })
+			.then((response) => (response.ok ? response.text() : ''))
+			.then((text) => {
+				const latest = text.trim();
+				const next = newer(win.location.href, build, latest);
+				if (next && latest !== shown) {
+					shown = latest;
+					told(next, latest);
+				}
+			})
+			.catch(() => {});
+		const back = () => { if (win.document.visibilityState === 'visible') check(); };
+		const timer = win.setInterval(check, every);
+		if (win.document) win.document.addEventListener('visibilitychange', back);
+		return {
+			check,
+			stop() {
+				win.clearInterval(timer);
+				if (win.document) win.document.removeEventListener('visibilitychange', back);
+			},
+		};
+	}
+
+	const api = { install, versioned, newer, watch, VERSION, CHECK_EVERY };
 	return api;
 });

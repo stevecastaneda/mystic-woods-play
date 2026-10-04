@@ -2,6 +2,13 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'October 4, 2026',
+    title: 'Never miss an update',
+    changes: [
+      'When a new version comes out while you play, a note pops up on the right. Press Refresh to get it, or Later to keep playing.'
+    ]
+  },
+  {
+    date: 'October 4, 2026',
     title: 'Build your camp your way!',
     changes: [
       'When you build something at camp, you carry it. Set it down wherever you like inside the fence.',

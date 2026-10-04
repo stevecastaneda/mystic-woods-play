@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'October 4, 2026',
+    title: 'Your camp has its own home!',
+    changes: [
+      'Every Endless run now starts at your home camp, with Luke, Charlotte and everything you built. It is the same place every time.',
+      'Step into the glowing waystone to head out into the Wilds.',
+      'Your Waystone Shard brings you straight back home. The camp no longer shows up out in the forests.'
+    ]
+  },
+  {
+    date: 'October 4, 2026',
     title: 'Pick up where you left off',
     changes: [
       'Closed the game in the middle of an Endless run? Press Continue on the title screen to jump back in.',

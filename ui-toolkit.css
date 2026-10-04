@@ -89,3 +89,7 @@ progress{appearance:none;border:0;border-radius:0;box-shadow:0 0 0 2px var(--out
 #update-note .actions button{margin:0;font-size:22px;padding:0 20px}
 @keyframes note-in{from{transform:translateY(-24px);opacity:0}to{transform:none;opacity:1}}
 @media(prefers-reduced-motion:reduce){#update-note{animation:none}}
+
+/* CONTINUE (shell.html, scripts/run_save.gd): an Endless run saved at its last floor's start, offered on a row of its own over the two modes, as wide as both. */
+.continue-row{display:flex;justify-content:center;margin:0 0 16px}.continue-row[hidden]{display:none}
+.continue-row .primary{margin:0;width:min(536px,100%)}

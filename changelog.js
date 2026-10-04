@@ -2,6 +2,14 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'October 4, 2026',
+    title: 'Pick up where you left off',
+    changes: [
+      'Closed the game in the middle of an Endless run? Press Continue on the title screen to jump back in.',
+      'You start the floor you were on, with all your coins, gear, hearts and bag.'
+    ]
+  },
+  {
+    date: 'October 4, 2026',
     title: 'Never miss an update',
     changes: [
       'When a new version comes out while you play, a note pops up on the right. Press Refresh to get it, or Later to keep playing.'

@@ -7,7 +7,8 @@ window.WILDS_CHANGELOG = [
       'When you build something at camp, you carry it. Set it down wherever you like inside the fence.',
       'A green box shows where it will go. Red means it won\'t fit there.',
       'Changed your mind? Pick MOVE on the Wishing Post to carry it somewhere new. Your camp stays the way you built it.',
-      'Update: lots more room to place things, and a note on screen shows what you are carrying.'
+      'Update: lots more room to place things, and a note on screen shows what you are carrying.',
+      'The Wishing Post now stands by the camp fire, right next to Luke.'
     ]
   },
   {

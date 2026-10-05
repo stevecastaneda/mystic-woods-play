@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'October 5, 2026',
+    title: 'A real orchestra',
+    changes: [
+      'All the music is now played by real recorded instruments: horns, strings, flutes, harp, timpani, organ and bells.',
+      "Hollowoak's battle and the crypt music are twice as long, with new parts to discover.",
+      'Both bosses fight to real brass and strings. The Seal Keeper even gets a real anvil.'
+    ]
+  },
+  {
+    date: 'October 5, 2026',
     title: 'Boss rooms',
     changes: [
       "Cold blue ghost flames now burn in the Seal Keeper's room.",

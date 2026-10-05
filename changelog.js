@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'October 4, 2026',
+    title: 'Bombs and arrows for sale',
+    changes: [
+      'The Wayfarer has a new Supplies shelf. Press L or R at the counter to reach it.',
+      'A pack of 3 bombs costs 15 coins, and a quiver of 10 arrows costs 10.',
+      'The Controls page now shows the item and switch buttons.'
+    ]
+  },
+  {
+    date: 'October 4, 2026',
     title: 'Camp building fixed',
     changes: [
       'A bench or anything else you build at the Wishing Post now stays right where it appears.',

@@ -2,6 +2,14 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'October 5, 2026',
+    title: 'Hits you can feel',
+    changes: [
+      'Dashing kicks up a burst of dust and leaves a trail behind you.',
+      'Monsters you knock back skid through the dirt, and a finishing blow pops with sparks.'
+    ]
+  },
+  {
+    date: 'October 5, 2026',
     title: 'How it all began',
     changes: [
       'Your first Endless run now opens with the story. One night the camp\'s waystone wakes up, and a voice you know calls out of it.',

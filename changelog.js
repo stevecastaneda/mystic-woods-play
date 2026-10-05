@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'October 4, 2026',
+    title: 'Bombs and a bow!',
+    changes: [
+      'Press F (or R1) to set a bomb. It blows up monsters, grass, pots and cracked crypt walls, and it never hurts you.',
+      'Press Q (or L1) to switch to your bow, then F to shoot arrows the way you face.',
+      'Every run starts with 3 bombs and 10 arrows. Chests hold more, and pots and grass refill you when you run low.'
+    ]
+  },
+  {
+    date: 'October 4, 2026',
     title: 'Your camp has its own home!',
     changes: [
       'Every Endless run now starts at your home camp, with Luke, Charlotte and everything you built. It is the same place every time.',

@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'October 5, 2026',
+    title: 'How it all began',
+    changes: [
+      'Your first Endless run now opens with the story. One night the camp\'s waystone wakes up, and a voice you know calls out of it.',
+      'The stone flings you into the sky, and you come down as the meteor. Now you know why you\'re lost in the Wilds.',
+      'The meteor roars as it falls and crashes with a boom you can feel.'
+    ]
+  },
+  {
+    date: 'October 5, 2026',
     title: 'A bigger crash landing',
     changes: [
       'You now hit the forest inside a blazing meteor. Watch its shadow grow, then the blast and the rocks flying out.',

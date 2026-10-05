@@ -2,6 +2,14 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'October 4, 2026',
+    title: 'Camp building fixed',
+    changes: [
+      'A bench or anything else you build at the Wishing Post now stays right where it appears.',
+      'Want it somewhere else? Choose MOVE on its card. Use always sets it down, as close to where you stand as it fits.'
+    ]
+  },
+  {
+    date: 'October 4, 2026',
     title: 'Bombs and a bow!',
     changes: [
       'Press F (or R1) to set a bomb. It blows up monsters, grass, pots and cracked crypt walls, and it never hurts you.',

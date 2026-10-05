@@ -2,8 +2,9 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'October 5, 2026',
-    title: 'Boss themes',
+    title: 'Boss rooms',
     changes: [
+      "Cold blue ghost flames now burn in the Seal Keeper's room.",
       'The Seal Keeper fights to a cathedral battle: tolling bells, pipe organ, a chanting choir and roaring brass.',
       'The Slime King stomps in to a villain march of tuba, marimba and shouting choir. Listen for the giant BOING.'
     ]

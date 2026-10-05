@@ -2,6 +2,14 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'October 5, 2026',
+    title: "The Warden's Camp",
+    changes: [
+      "Endless has its own story now. Your family moves into Grandma's old camp at the edge of the Wilds, where she kept the waystones asleep.",
+      'Then the stones wake, and a serpent of green fire snatches you into the sky. Fight your way back!'
+    ]
+  },
+  {
+    date: 'October 5, 2026',
     title: 'Hits you can feel',
     changes: [
       'Dashing kicks up a burst of dust and leaves a trail behind you.',

@@ -2,6 +2,14 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'October 5, 2026',
+    title: 'Booms and thuds',
+    changes: [
+      'Bombs leave a scorch mark, a shockwave and a ring of rolling dust.',
+      'Arrows that hit a wall stick in it and quiver, and chests burst with light when you open them.'
+    ]
+  },
+  {
+    date: 'October 5, 2026',
     title: "The Warden's Camp",
     changes: [
       "Endless has its own story now. Your family moves into Grandma's old camp at the edge of the Wilds, where she kept the waystones asleep.",

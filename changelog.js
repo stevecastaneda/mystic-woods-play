@@ -2,6 +2,14 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'October 5, 2026',
+    title: 'Lost in the Wilds',
+    changes: [
+      'After the meteor lands, new music plays while you search for your family: lonely and a little eerie, but brave.',
+      'Find them at the camp and the cheerful forest music comes back.'
+    ]
+  },
+  {
+    date: 'October 5, 2026',
     title: 'Booms and thuds',
     changes: [
       'Bombs leave a scorch mark, a shockwave and a ring of rolling dust.',

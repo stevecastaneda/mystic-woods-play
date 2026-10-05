@@ -4,8 +4,8 @@ window.WILDS_CHANGELOG = [
     date: 'October 5, 2026',
     title: 'Boss themes',
     changes: [
-      'The Seal Keeper marches to his own heavy iron theme, anvils clanging on every beat.',
-      'The Slime King bounces in to a theme that hops like he does.'
+      'The Seal Keeper marches to his own heavy iron theme, now faster and longer, building to a huge finish.',
+      'The Slime King bounces in to a quick theme that hops like he does, with a swaggering middle and a big climax.'
     ]
   },
   {

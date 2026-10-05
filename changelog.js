@@ -1,6 +1,14 @@
 // Keep this short and player-facing. Newest releases first; show at most three.
 window.WILDS_CHANGELOG = [
   {
+    date: 'October 5, 2026',
+    title: 'A bigger crash landing',
+    changes: [
+      'You now hit the forest inside a blazing meteor. Watch its shadow grow, then the blast and the rocks flying out.',
+      'You climb out of a smoking crater, and it stays there for the rest of that forest.'
+    ]
+  },
+  {
     date: 'October 4, 2026',
     title: 'Crash-land in the Wilds!',
     changes: [

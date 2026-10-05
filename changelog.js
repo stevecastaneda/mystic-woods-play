@@ -5,7 +5,8 @@ window.WILDS_CHANGELOG = [
     title: 'Boss rooms',
     changes: [
       "Cold blue ghost flames now burn in the Seal Keeper's room.",
-      "The Seal Keeper and the Slime King fight to their old-school chip themes again, the way the rest of the game sounds."
+      "The Seal Keeper and the Slime King fight to their old-school chip themes again, the way the rest of the game sounds.",
+      'Fixed: continuing Chapter 3 now picks up inside the dungeon instead of out in the forest.'
     ]
   },
   {

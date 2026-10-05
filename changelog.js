@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'October 5, 2026',
+    title: 'The Hookshot',
+    changes: [
+      "Beat your way to a boss dungeon's Big Chest to find the Hookshot!",
+      'Fire it at a hook post, crate or tree and it yanks you across pits. Fire it at a small monster and it drags it in, stunned.',
+      'Deeper dungeons hide treasure ledges you can only reach with it. Look for the iron-banded posts.'
+    ]
+  },
+  {
+    date: 'October 5, 2026',
     title: 'Boss rooms',
     changes: [
       "Cold blue ghost flames now burn in the Seal Keeper's room.",

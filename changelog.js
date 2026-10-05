@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'October 4, 2026',
+    title: 'Crash-land in the Wilds!',
+    changes: [
+      'A new Endless run starts with you streaking out of the sky into the middle of the forest. Monsters are already about.',
+      'Luke and Charlotte are waiting at the home camp. Fight your way through depth 3 to find them.',
+      'From camp, the waystone takes you on to depth 4. Your Waystone Shard still brings you straight home.'
+    ]
+  },
+  {
+    date: 'October 4, 2026',
     title: 'Bombs and arrows for sale',
     changes: [
       'The Wayfarer has a new Supplies shelf. Press L or R at the counter to reach it.',

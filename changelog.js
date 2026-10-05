@@ -2,6 +2,14 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'October 5, 2026',
+    title: 'Boss themes',
+    changes: [
+      'The Seal Keeper marches to his own heavy iron theme, anvils clanging on every beat.',
+      'The Slime King bounces in to a theme that hops like he does.'
+    ]
+  },
+  {
+    date: 'October 5, 2026',
     title: "Chapter 4: Mom's Lantern",
     changes: [
       "Story Mode goes on! Out of the dungeon, the kids find Mom's lantern. She came into the woods looking for them.",

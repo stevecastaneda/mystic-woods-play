@@ -2,6 +2,15 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'October 5, 2026',
+    title: "Chapter 4: Mom's Lantern",
+    changes: [
+      "Story Mode goes on! Out of the dungeon, the kids find Mom's lantern. She came into the woods looking for them.",
+      'Follow the golden leaves she dropped to find her. No arrows anymore, so keep your eyes on the ground!',
+      'Falling stars lose their arrow too. Look for the glow.'
+    ]
+  },
+  {
+    date: 'October 5, 2026',
     title: 'Chapter 3: Sealed In',
     changes: [
       "Story Mode goes on! Locked in the Stranger's dungeon, find the keys and fight your way down to the Seal Keeper, a giant knight of black iron.",

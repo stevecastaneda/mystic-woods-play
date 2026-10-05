@@ -2,6 +2,14 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'October 5, 2026',
+    title: 'Chapter 3: Sealed In',
+    changes: [
+      "Story Mode goes on! Locked in the Stranger's dungeon, find the keys and fight your way down to the Seal Keeper, a giant knight of black iron.",
+      'Beat him to escape, and find out who the Stranger really is.'
+    ]
+  },
+  {
+    date: 'October 5, 2026',
     title: 'Lost in the Wilds',
     changes: [
       'After the meteor lands, new music plays while you search for your family: lonely and a little eerie, but brave.',

@@ -2,11 +2,13 @@
 window.WILDS_CHANGELOG = [
   {
     date: 'October 5, 2026',
-    title: 'The Hookshot',
+    title: 'The Hookshot and the Boomerang',
     changes: [
       "Beat your way to a boss dungeon's Big Chest to find the Hookshot!",
       'Fire it at a hook post, crate or tree and it yanks you across pits. Fire it at a small monster and it drags it in, stunned.',
-      'Deeper dungeons hide treasure ledges you can only reach with it. Look for the iron-banded posts.'
+      'Deeper dungeons hide treasure ledges you can only reach with it. Look for the iron-banded posts.',
+      "The next boss dungeon's Big Chest holds the Boomerang! Throw it any way, even on a slant. It flies over pits and water, stuns monsters and brings back coins, hearts, arrows and keys.",
+      'Spot treasure stranded on an island? The Boomerang can fetch it.'
     ]
   },
   {

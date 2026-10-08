@@ -92,7 +92,74 @@ body {
 		</style>
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
-
+<script>
+/* Mystic Woods HD (scripts/kit/web_loops.gd): loops without a gap on the web, and
+   lockstep pairs that stay in step. Godot loops a Web Audio sample by restarting
+   it when it ends, leaving a few milliseconds of silence at every seam. The game
+   declares each loop's length in seconds (window.hdLoops.add); a buffer of that
+   length then loops natively, once the few frames at its start that the engine
+   rendered with nothing before them are healed from the loop's end. Loops of a
+   length put on one clock (window.hdLoops.together) start on an exact sample a
+   moment ahead, at the offset that keeps them in step with the others of that
+   length still playing, however far apart the browser got round to each start. */
+(function () {
+  var seconds = [], clocks = [], LEAD = 0.1;
+  window.hdLoops = {
+    add: function (s) { if (seconds.indexOf(s) < 0) seconds.push(s); },
+    together: function (s) {
+      clocks = clocks.filter(function (c) { return c.seconds !== s; });
+      clocks.push({ seconds: s, origin: 0, playing: 0, joined: 0 });
+    },
+    declared: seconds, looped: 0, clocks: function () { return clocks; }
+  };
+  function matches(b, s) { return Math.abs(b.length - s * b.sampleRate) <= 1.5; }
+  function declared(b) {
+    for (var i = 0; i < seconds.length; i++) { if (matches(b, seconds[i])) return true; }
+    return false;
+  }
+  function clockFor(b) {
+    for (var i = 0; i < clocks.length; i++) { if (matches(b, clocks[i].seconds)) return clocks[i]; }
+    return null;
+  }
+  function heal(b) {
+    var n = b.length, k = 8, xs = [-2, -1, k, k + 1];
+    for (var c = 0; c < b.numberOfChannels; c++) {
+      var d = b.getChannelData(c), ys = [d[n - 2], d[n - 1], d[k], d[k + 1]];
+      for (var i = 0; i < k; i++) {
+        var v = 0;
+        for (var j = 0; j < 4; j++) {
+          var w = ys[j];
+          for (var m = 0; m < 4; m++) { if (m !== j) w *= (i - xs[m]) / (xs[j] - xs[m]); }
+          v += w;
+        }
+        d[i] = v;
+      }
+    }
+  }
+  var start = AudioBufferSourceNode.prototype.start;
+  AudioBufferSourceNode.prototype.start = function (when, offset) {
+    var b = this.buffer, ctx = this.context;
+    if (!b || this.loop || b.length <= 4096 || !declared(b)) return start.apply(this, arguments);
+    heal(b);
+    this.loop = true;
+    window.hdLoops.looped++;
+    var clock = clockFor(b);
+    if (!clock || b.sampleRate !== ctx.sampleRate) return start.apply(this, arguments);
+    var n = b.length, rate = b.sampleRate, from;
+    var at = Math.ceil(Math.max(when || 0, ctx.currentTime + LEAD) * rate);
+    if (clock.playing > 0) {
+      from = ((at - clock.origin) % n + n) % n;
+    } else {
+      from = Math.round((offset || 0) * rate) % n;
+      clock.origin = at - from;
+    }
+    clock.playing++;
+    clock.joined++;
+    this.addEventListener('ended', function () { clock.playing--; });
+    return start.call(this, at / rate, from / rate);
+  };
+})();
+</script>
 	</head>
 	<body>
 		<canvas id="canvas">
@@ -111,7 +178,7 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":4395932,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":39270076,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 

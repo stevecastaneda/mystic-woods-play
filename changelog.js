@@ -4,6 +4,7 @@ window.WILDS_CHANGELOG = [
     date: 'October 7, 2026',
     title: 'Golden light',
     changes: [
+      'Fixed the old stone door in Story Mode sometimes standing far from camp after you met the Stranger.',
       'Sunbeams slant through the trees by day, with dust drifting down through them.',
       "Late afternoon turns gold: treetops glow in the low sun, paths warm to tan and orange, and the misty woods' mist catches the light.",
       'At dusk the leaves stay green while the last light lands on paths and roofs.',

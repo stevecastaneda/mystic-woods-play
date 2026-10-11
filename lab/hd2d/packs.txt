@@ -1,2 +1,3 @@
 audio-4acc0b08c88a.pck
 floors-8192832e9354.pck
+hero-7863fe3c4da4.pck

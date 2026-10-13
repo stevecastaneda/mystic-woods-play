@@ -1,4 +1,5 @@
 audio-4acc0b08c88a.pck
-family-47b4ff2f3737.pck
+family-b0ec485252f6.pck
 floors-8192832e9354.pck
-hero-dc34d2b9a7c0.pck
+hero-376a17ad7544.pck
+stranger-423f1659235f.pck

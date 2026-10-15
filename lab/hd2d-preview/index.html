@@ -219,7 +219,8 @@ addEventListener('DOMContentLoaded', function () {
    reloads the page into the journey: the game finds hdResume in the tab's
    sessionStorage and opens on the kept journey's own place with no title
    (Journey.resuming). hdResume carries how many times this tab has lost the
-   graphics, and from the second the game draws at its LOW tier. The game
+   graphics, and from the first the game draws at its LOW tier, a preview
+   link's visit too (it keeps no journey and loads its own place). The game
    keeps the journey as each map change begins and on every flag, rune,
    heart and arrival, mirrored into localStorage at once, so a reload loses
    only the steps since. No preventDefault: Godot can't take a restored
@@ -274,7 +275,7 @@ addEventListener('DOMContentLoaded', function () {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":11275968,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":11276128,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 

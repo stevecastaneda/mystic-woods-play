@@ -1,5 +1,5 @@
 audio-303930d3173d.pck
-family-ac3ce69000f5.pck
+family-a9b1187d2c8f.pck
 floors-932a7837de1d.pck
-hero-483bb90ece20.pck
-stranger-423f1659235f.pck
+hero-858bfc86e4c1.pck
+stranger-480c7b565b6f.pck

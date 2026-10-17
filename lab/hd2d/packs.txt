@@ -1,6 +1,7 @@
 audio-c9a6bbd72ddf.pck
+bosses-53c4333d0ad8.pck
 family-d903c2a5b4c6.pck
 floors-932a7837de1d.pck
-hero-49052498be86.pck
+hero-fe41b860553c.pck
 keeper-8bbb194487d3.pck
 stranger-fce6e756d512.pck

@@ -1,5 +1,5 @@
 audio-c9a6bbd72ddf.pck
 family-7fa177c8ace8.pck
 floors-932a7837de1d.pck
-hero-d36579b7b96e.pck
+hero-132ce4fa91f9.pck
 stranger-480c7b565b6f.pck

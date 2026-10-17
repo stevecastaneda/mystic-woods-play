@@ -116,6 +116,15 @@ html, body, #canvas, #status {
 #status-splash { position: absolute; margin: 0; right: auto; bottom: auto; max-width: none; max-height: none;
   object-fit: fill; image-rendering: pixelated; }
 .mw-rule { position: absolute; pointer-events: none; }
+/* Words under the rule, so a slow first visit (a phone on a restaurant's
+   Wi-Fi, Steve #2123) reads as loading, not broken: what it is doing, a
+   bar not a number, and after a while a word that the first visit is the
+   slow one. */
+.mw-words { position: absolute; left: 0; right: 0; text-align: center; pointer-events: none;
+  color: #d9b77a; font: 600 16px/1.5 Georgia, 'Times New Roman', serif; letter-spacing: 0.08em; padding: 0 16px; }
+.mw-words small { display: block; color: #8a7350; font-size: 13px; letter-spacing: 0.04em; opacity: 0;
+  transition: opacity 0.6s; }
+.mw-words.mw-slow small { opacity: 1; }
 .mw-ember { position: absolute; left: 0; top: 0; width: 100%; height: 100%; transform-origin: 0 50%;
   transform: scaleX(0); transition: transform 0.3s linear;
   background: linear-gradient(90deg, #4a1006, #b8360f 35%, #ff7a1e 80%, #ffd890);
@@ -177,6 +186,11 @@ addEventListener('DOMContentLoaded', function () {
     rule.appendChild(spark);
   });
   status.appendChild(rule);
+  var words = document.createElement('div');
+  words.className = 'mw-words';
+  words.innerHTML = '<span>Loading the woods...</span><small>The first visit takes longest on slow Wi-Fi.</small>';
+  status.appendChild(words);
+  setTimeout(function () { words.classList.add('mw-slow'); }, 8000);
   function place() {
     var w = innerWidth, h = innerHeight;
     var s = Math.min(w / 1280, h / 720);
@@ -191,6 +205,7 @@ addEventListener('DOMContentLoaded', function () {
     rule.style.width = (RULE_X1 - RULE_X0) * k + 'px';
     rule.style.height = k + 'px';
     rule.style.fontSize = k + 'px';
+    words.style.top = top + LOGO_H * k + 28 + 'px';
   }
   /* The loader counts a file into its total only once it starts on it, so
      its own share dips as the second begins: the rule burns against the
@@ -203,6 +218,7 @@ addEventListener('DOMContentLoaded', function () {
     burnt = Math.max(burnt, Math.min(1, p));
     ember.style.transform = 'scaleX(' + burnt + ')';
     if (burnt >= 1) status.classList.add('mw-kindled');
+    words.firstChild.textContent = burnt >= 1 ? 'Waking the woods...' : burnt >= 0.7 ? 'Almost there...' : 'Loading the woods...';
   }
   place();
   burn();

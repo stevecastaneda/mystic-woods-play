@@ -1,0 +1,15 @@
+{
+  "name": "Mystic Woods",
+  "short_name": "Mystic Woods",
+  "description": "Pick which Mystic Woods to play: the HD game, Evan's preview, or the classic pixel game.",
+  "start_url": "./",
+  "scope": "/mystic-woods-play/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#06100c",
+  "theme_color": "#0b1a15",
+  "icons": [
+    {"src": "icon-180.png", "sizes": "180x180", "type": "image/png"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}
+  ]
+}

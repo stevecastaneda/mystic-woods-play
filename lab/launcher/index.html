@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Mystic Woods</title>
+<meta name="description" content="Pick which Mystic Woods to play: the HD game, Evan's preview, or the classic pixel game.">
+<!-- Saved to a phone's or an iPad's home screen it opens like an app (the manifest's scope is the whole
+     site, so the games open inside it too), and the icon is the HD title's M. -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Mystic Woods">
+<meta name="theme-color" content="#0b1a15">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" href="icon-180.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preload" href="VT323-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<style>
+@font-face{font-family:Woods;src:url("VT323-Regular.ttf") format("truetype");font-display:swap}
+:root{
+  --bg:#0b1a15;--bg-deep:#06100c;--ink:#efe4c4;--ink-dim:#b9ad8a;--gold:#d8b46a;--gold-hi:#f3d58f;
+  --iron:#26231f;--iron-edge:#0e0c0a;--iron-hi:#4a443c;--rivet:#8a7d63;--ember:#e98a3c;--moss:#7fa36a;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg-deep);color:var(--ink);font-family:Woods,monospace}
+body{
+  min-height:100dvh;
+  background:
+    radial-gradient(120% 70% at 50% 0%,#1d3a2c 0%,transparent 60%),
+    radial-gradient(90% 60% at 50% 110%,#2a1a0e 0%,transparent 70%),
+    var(--bg-deep);
+  padding:max(20px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(24px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));
+  -webkit-tap-highlight-color:transparent;
+}
+main{max-width:980px;margin:0 auto}
+header{text-align:center;margin:8px 0 22px}
+.mark{width:72px;height:72px;image-rendering:pixelated;filter:drop-shadow(0 0 18px #e98a3c55)}
+h1{font-weight:400;font-size:clamp(40px,9vw,64px);letter-spacing:.08em;margin:6px 0 0;line-height:1;
+  color:var(--gold-hi);text-shadow:0 2px 0 #5a3c14,0 0 24px #e98a3c40}
+.rule{display:flex;align-items:center;gap:10px;justify-content:center;margin:10px auto 0;width:min(420px,80%)}
+.rule i{flex:1;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.rule b{width:8px;height:8px;transform:rotate(45deg);background:var(--gold)}
+.sub{color:var(--ink-dim);font-size:22px;margin:10px 0 0}
+.games{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+a.game{
+  display:flex;flex-direction:column;text-decoration:none;color:inherit;position:relative;
+  background:var(--iron);border:3px solid var(--iron-edge);box-shadow:inset 0 2px 0 var(--iron-hi),inset 0 -2px 0 #000,0 10px 30px #0008;
+  transition:transform .12s ease,box-shadow .12s ease;
+}
+a.game:hover,a.game:focus-visible{transform:translateY(-3px);box-shadow:inset 0 2px 0 var(--iron-hi),inset 0 -2px 0 #000,0 16px 40px #000a,0 0 0 2px var(--gold)}
+a.game:active{transform:translateY(0) scale(.99)}
+a.game:focus-visible{outline:none}
+.game.main{grid-column:1/-1}
+.shot{position:relative;aspect-ratio:16/9;overflow:hidden;border-bottom:3px solid var(--iron-edge);background:#000}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+.game.main .shot{aspect-ratio:21/9}
+.tag{position:absolute;top:10px;left:10px;font-size:20px;line-height:1;padding:6px 10px 5px;letter-spacing:.06em;
+  background:#0b0908e6;border:2px solid var(--gold);color:var(--gold-hi)}
+.tag.test{border-color:var(--moss);color:#cfe7b8}
+.tag.old{border-color:var(--rivet);color:var(--ink-dim)}
+.plate{display:flex;align-items:center;gap:14px;padding:14px 16px 16px;position:relative}
+.plate:before,.plate:after{content:"";position:absolute;top:50%;width:6px;height:6px;margin-top:-3px;background:var(--rivet);box-shadow:inset -1px -1px 0 #0006}
+.plate:before{left:6px}.plate:after{right:6px}
+.words{flex:1;min-width:0;padding-left:8px}
+.name{font-size:32px;line-height:1;color:var(--ink)}
+.game.main .name{font-size:40px;color:var(--gold-hi)}
+.what{font-size:20px;line-height:1.15;color:var(--ink-dim);margin-top:6px}
+.play{flex:none;font-size:26px;line-height:1;padding:10px 16px 8px;margin-right:8px;letter-spacing:.06em;
+  color:#1b120a;background:linear-gradient(#f3d58f,#c9953f);border:2px solid #5a3c14;box-shadow:inset 0 1px 0 #fff6,0 3px 0 #3a250c}
+.game.main .play{font-size:30px;padding:12px 22px 10px}
+.game.test .play{background:linear-gradient(#cfe7b8,#7fa36a);border-color:#2f4a24;box-shadow:inset 0 1px 0 #fff6,0 3px 0 #1e3118}
+.game.classic .play{background:linear-gradient(#e7dcc0,#a99a78);border-color:#4a4030;box-shadow:inset 0 1px 0 #fff6,0 3px 0 #2e281e}
+footer{margin:26px 0 0;text-align:center;color:var(--ink-dim);font-size:19px;line-height:1.3}
+footer b{color:var(--ink);font-weight:400}
+@media (max-width:600px){
+  .games{grid-template-columns:1fr}
+  .game.main .shot{aspect-ratio:16/9}
+  .name{font-size:28px}.game.main .name{font-size:34px}
+  .play{font-size:22px;padding:9px 12px 7px}.game.main .play{font-size:26px;padding:10px 16px 8px}
+}
+@media (prefers-reduced-motion:reduce){a.game{transition:none}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img class="mark" src="icon-180.png" alt="" width="72" height="72">
+    <h1>MYSTIC WOODS</h1>
+    <div class="rule"><i></i><b></b><i></i></div>
+    <p class="sub">Choose your adventure</p>
+  </header>
+
+  <nav class="games">
+    <a class="game main" href="../hd2d/">
+      <div class="shot"><img src="hd.jpg" alt="The HD game: the Wayfarer at the glade's campfire" width="640" height="360"></div>
+      <span class="tag">HD</span>
+      <div class="plate">
+        <div class="words">
+          <div class="name">Mystic Woods HD</div>
+          <div class="what">The 3D adventure. Find Mom, save Luke.</div>
+        </div>
+        <span class="play">PLAY</span>
+      </div>
+    </a>
+
+    <a class="game test" href="../hd2d-preview/">
+      <div class="shot"><img src="preview.jpg" alt="Evan's preview: the Wind Gears room in the fortress" width="640" height="360" loading="lazy"></div>
+      <span class="tag test">TESTING</span>
+      <div class="plate">
+        <div class="words">
+          <div class="name">Evan's Preview</div>
+          <div class="what">The newest rooms, before they go live.</div>
+        </div>
+        <span class="play">TRY</span>
+      </div>
+    </a>
+
+    <a class="game classic" href="../../">
+      <div class="shot"><img src="classic.jpg" alt="The classic pixel game's forest" width="640" height="360" loading="lazy"></div>
+      <span class="tag old">CLASSIC</span>
+      <div class="plate">
+        <div class="words">
+          <div class="name">Pixel Classic</div>
+          <div class="what">The original pixel game and Endless Wilds.</div>
+        </div>
+        <span class="play">PLAY</span>
+      </div>
+    </a>
+  </nav>
+
+  <footer>
+    On an iPhone or iPad: tap <b>Share</b>, then <b>Add to Home Screen</b>, and this page becomes one Mystic Woods icon for every version.
+  </footer>
+</main>
+</body>
+</html>

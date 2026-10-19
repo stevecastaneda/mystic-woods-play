@@ -4,4 +4,5 @@ family-a9b1187d2c8f.pck
 floors-932a7837de1d.pck
 hero-4c3d9f3305f4.pck
 keeper-d2dfb86a705f.pck
+prisoner-f8f1905e4811.pck
 stranger-480c7b565b6f.pck

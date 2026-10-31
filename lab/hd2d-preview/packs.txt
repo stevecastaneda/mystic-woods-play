@@ -6,3 +6,4 @@ hero-4c3d9f3305f4.pck
 keeper-d2dfb86a705f.pck
 prisoner-f8f1905e4811.pck
 stranger-480c7b565b6f.pck
+villagers-cb465fd80177.pck
